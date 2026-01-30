@@ -1,7 +1,7 @@
 <h1 align="center">Hey 👋 I'm Chamath Sandaru</h1>
 
 <p align="center">
-  <strong>Software Engineer | Tech Enthusiast | UI/UX Explorer</strong>
+  <strong>Software Engineering Student | Full-Stack Developer | IoT Enthusiast</strong>
 </p>
 
 <p align="center">
@@ -13,20 +13,21 @@
 
 ### 💫 About Me
 
-මම ශ්‍රී ලංකාවේ ගම්පහ ප්‍රදේශයේ පදිංචි මෘදුකාංග ඉංජිනේරු ක්ෂේත්‍රයට උනන්දුවක් දක්වන අයෙක්. අලුත් දේවල් ඉගෙන ගන්න වගේම ලස්සන සහ කාර්යක්ෂම වෙබ් අඩවි නිර්මාණය කරන්න මම හරිම කැමතියි.
+I am a **Software Engineering student** at the **Java Institute for Advanced Technology**, based in Gampaha, Sri Lanka. I am passionate about building scalable, efficient web applications and exploring the intersection of hardware and software through IoT projects.
 
 * 🌍  Check out my portfolio: **[www.chamathsandaru.info](http://www.chamathsandaru.info)**
+* 💻  Currently building: **Modular POS & LMS Systems** and **DownloaderX**
 * 📧  Reach me at: **chamathsandaru.se@gmail.com**
-* 🚀  Currently exploring: **Next.js & Advanced Python**
+* 🚀  Tech Focus: **Next.js, Spring Boot, and Native Android Development**
 
 ---
 
 ### 🛠️ Tech Stack & Tools
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,nextjs,react,vue,tailwind,python,julia&perline=7" alt="tech stack" />
+  <img src="https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,java,spring,php,py,mongodb&perline=9" alt="tech stack" />
   <br><br>
-  <img src="https://skillicons.dev/icons?i=vscode,pycharm,figma,photoshop,mongodb,git,npm,chrome&perline=8" alt="tools" />
+  <img src="https://skillicons.dev/icons?i=vscode,idea,figma,ps,git,firebase,arduino,cpp,mysql&perline=9" alt="tools" />
 </div>
 
 ---
