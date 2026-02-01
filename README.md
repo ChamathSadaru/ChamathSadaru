@@ -15,10 +15,10 @@
 
 I am a **Software Engineering student** at the **Java Institute for Advanced Technology**, based in Gampaha, Sri Lanka. I am passionate about building scalable, efficient web applications and exploring the intersection of hardware and software through IoT projects.
 
-* 🌍  Check out my portfolio: **[www.chamathsandaru.info](http://www.chamathsandaru.info)**
-* 💻  Currently building: **Modular POS & LMS Systems** and **DownloaderX**
-* 📧  Reach me at: **chamathsandaru.se@gmail.com**
-* 🚀  Tech Focus: **Next.js, Spring Boot, and Native Android Development**
+* 🌍 Check out my portfolio: **[www.chamathsandaru.info](http://www.chamathsandaru.info)**
+* 💻 Currently building: **Modular POS & LMS Systems** and **DownloaderX**
+* 📧 Reach me at: **chamathsandaru.se@gmail.com**
+* 🚀 Tech Focus: **Next.js, Spring Boot, and Native Android Development**
 
 ---
 
@@ -37,6 +37,16 @@ I am a **Software Engineering student** at the **Java Institute for Advanced Tec
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=ChamathSadaru&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="150" alt="streak graph" />
   <img src="https://github-profile-trophy.vercel.app?username=ChamathSadaru&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8" height="150" alt="trophy graph" />
+</div>
+
+<br />
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake.svg">
+  </picture>
 </div>
 
 <br />
