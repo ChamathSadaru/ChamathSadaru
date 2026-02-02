@@ -1,4 +1,4 @@
-<img width="904" height="383" alt="image" src="https://github.com/user-attachments/assets/074dbbca-778c-4d8c-8fdf-7243f9e1e9cf" /><h1 align="center">Hey 👋 I'm Chamath Sandaru</h1>
+<h1 align="center">Hey 👋 I'm Chamath Sandaru</h1>
 
 <p align="center">
   <strong>Software Engineering Student | Full-Stack Developer | IoT Enthusiast</strong>
