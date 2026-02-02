@@ -1,4 +1,5 @@
-<h1 align="center">Hey 👋 I'm Chamath Sandaru</h1>
+<h1 align="center">Hey <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Crossed%20Fingers.png" alt="Crossed Fingers" width="25" height="25" /> I'm Chamath Sandaru</h1>
+
 
 <p align="center">
   <strong>Software Engineering Student | Full-Stack Developer | IoT Enthusiast</strong>
