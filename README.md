@@ -62,13 +62,6 @@ I am Chamath Sandaru, a Software Engineering student at the Java Institute, spec
 
 <br />
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/pacman-contribution-graph.svg">
-    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/pacman-contribution-graph.svg">
-  </picture>
-</div>
 
 <br />
 
