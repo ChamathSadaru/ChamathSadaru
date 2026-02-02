@@ -1,4 +1,4 @@
-<h1 align="center">Hey 👋 I'm Chamath Sandaru</h1>
+<img width="904" height="383" alt="image" src="https://github.com/user-attachments/assets/074dbbca-778c-4d8c-8fdf-7243f9e1e9cf" /><h1 align="center">Hey 👋 I'm Chamath Sandaru</h1>
 
 <p align="center">
   <strong>Software Engineering Student | Full-Stack Developer | IoT Enthusiast</strong>
@@ -6,14 +6,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Location-Gampaha%2C%20Sri%20Lanka-blue?style=flat-square&logo=googlemaps" alt="Location">
-  <img src="https://img.shields.io/badge/Age-21-orange?style=flat-square" alt="Age">
+  <img src="https://img.shields.io/badge/Age-22-orange?style=flat-square" alt="Age">
 </p>
 
 ---
 
 ### 💫 About Me
 
-I am a **Software Engineering student** at the **Java Institute for Advanced Technology**, based in Gampaha, Sri Lanka. I am passionate about building scalable, efficient web applications and exploring the intersection of hardware and software through IoT projects.
+I am Chamath Sandaru, a Software Engineering student at the Java Institute, specializing in building scalable web architectures and high-performance mobile applications. My core expertise lies in the synergy between Full-Stack Development (Spring Boot, React) and Native Android environments. Beyond software, I have a deep-rooted interest in hardware integration and IoT systems, focusing on how code interacts with the physical world. I am committed to technical precision, clean code, and the continuous pursuit of mastering emerging technologies like Unreal Engine.
 
 * 🌍 Check out my portfolio: **[www.chamathsandaru.info](http://www.chamathsandaru.info)**
 * 💻 Currently building: **Modular POS & LMS Systems** and **DownloaderX**
@@ -22,12 +22,28 @@ I am a **Software Engineering student** at the **Java Institute for Advanced Tec
 
 ---
 
-### 🛠️ Tech Stack & Tools
+### 🤖 AI Tools
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,java,spring,php,py,mongodb&perline=9" alt="tech stack" />
-  <br><br>
-  <img src="https://skillicons.dev/icons?i=vscode,idea,figma,ps,git,firebase,arduino,cpp,mysql&perline=9" alt="tools" />
+  <img src="https://skillicons.dev/icons?i=gemini,chatgpt,copilot,cursor&perline=9" alt="ai tools" />
+</div>
+
+### 💻 Programming Languages
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=java,cpp,py,php,ts,spring,nextjs,react,tailwind&perline=9" alt="programming languages" />
+</div>
+
+### 🛠️ Coding Tools
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=vscode,idea,git,firebase,arduino,mongodb,mysql&perline=9" alt="tools" />
+</div>
+
+### 🎨 Creativity Tools
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ae,pr,ps,figma&perline=9" alt="creativity tools" />
 </div>
 
 ---
@@ -41,13 +57,8 @@ I am a **Software Engineering student** at the **Java Institute for Advanced Tec
 
 <br />
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake.svg">
-  </picture>
-</div>
+### 🐍 Snake Eating My Contributions
+![Snake animation](https://github.com/ChamathSadaru/ChamathSadaru/blob/output/github-contribution-grid-snake-dark.svg)
 
 <br />
 
@@ -56,6 +67,16 @@ I am a **Software Engineering student** at the **Java Institute for Advanced Tec
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/pacman-contribution-graph-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/pacman-contribution-graph.svg">
     <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/pacman-contribution-graph.svg">
+  </picture>
+</div>
+
+<br />
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/isocalendar.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/isocalendar.svg">
+    <img alt="isometric commit calendar" src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/isocalendar.svg">
   </picture>
 </div>
 
@@ -80,3 +101,7 @@ I am a **Software Engineering student** at the **Java Institute for Advanced Tec
 
 <br />
 <p align="center">"Code is like humor. When you have to explain it, it’s bad."</p>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=blur&height=300&color=gradient&text=ChamathZ&section=footer" alt="footer" />
+</div>
