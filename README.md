@@ -16,7 +16,7 @@
 
 I am Chamath Sandaru, a Software Engineering student at the Java Institute, specializing in building scalable web architectures and high-performance mobile applications. My core expertise lies in the synergy between Full-Stack Development (Spring Boot, React) and Native Android environments. Beyond software, I have a deep-rooted interest in hardware integration and IoT systems, focusing on how code interacts with the physical world. I am committed to technical precision, clean code, and the continuous pursuit of mastering emerging technologies like Unreal Engine.
 
-* 🌍 Check out my portfolio: **[www.chamathsandaru.info](http://www.chamathz.com)**
+* 🌍 Check out my portfolio: **[www.chamathz.com](http://www.chamathz.com)**
 * 💻 Currently building: **Modular POS & LMS Systems** and **DownloaderX**
 * 📧 Reach me at: **chamathsandaru.se@gmail.com**
 * 🚀 Tech Focus: **Next.js, Spring Boot, and Native Android Development**
