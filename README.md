@@ -16,8 +16,13 @@
 
 I am Chamath Sandaru, a Software Engineering student at the Java Institute, specializing in building scalable web architectures and high-performance mobile applications. My core expertise lies in the synergy between Full-Stack Development (Spring Boot, React) and Native Android environments. Beyond software, I have a deep-rooted interest in hardware integration and IoT systems, focusing on how code interacts with the physical world. I am committed to technical precision, clean code, and the continuous pursuit of mastering emerging technologies like Unreal Engine.
 
+<p align="center">
+  <img src="./skill_progress.svg" alt="Android Architecture Progress" width="800">
+</p>
+
+
 * 🌍 Check out my portfolio: **[www.chamathz.com](http://www.chamathz.com)**
-* 💻 Currently building: **Modular POS & LMS Systems** and **DownloaderX**
+* 💻 Currently building: **Smart Gowipala Android app**
 * 📧 Reach me at: **chamathsandaru.se@gmail.com**
 * 🚀 Tech Focus: **Next.js, Spring Boot, and Native Android Development**
 
@@ -26,7 +31,10 @@ I am Chamath Sandaru, a Software Engineering student at the Java Institute, spec
 ### 🤖 AI Tools
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=gemini,chatgpt,copilot,cursor&perline=9" alt="ai tools" />
+  <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=chatgpt&logoColor=white" alt="ChatGPT" />
+  <img src="https://img.shields.io/badge/GitHub_Copilot-24292e?style=for-the-badge&logo=githubcopilot&logoColor=white" alt="Copilot" />
+  <img src="https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini" />
+  <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
 </div>
 
 ### 💻 Programming Languages
@@ -56,15 +64,9 @@ I am Chamath Sandaru, a Software Engineering student at the Java Institute, spec
   <img src="https://github-profile-trophy.vercel.app?username=ChamathSadaru&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8" height="150" alt="trophy graph" />
 </div>
 
-<br />
 
 ### 🐍 Snake Eating My Contributions
 ![Snake animation](https://github.com/ChamathSadaru/ChamathSadaru/blob/output/github-contribution-grid-snake-dark.svg)
-
-<br />
-
-
-<br />
 
 <div align="center">
   <picture>
@@ -93,9 +95,4 @@ I am Chamath Sandaru, a Software Engineering student at the Java Institute, spec
   </a>
 </div>
 
-<br />
 <p align="center">"Code is like humor. When you have to explain it, it’s bad."</p>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=blur&height=300&color=gradient&text=ChamathZ&section=footer" alt="footer" />
-</div>
