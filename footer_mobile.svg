@@ -1,4 +1,10 @@
-<svg width="450" height="150" viewBox="0 0 450 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!--
+  © 2026 Chamath Sandaru
+  All Rights Reserved.
+  Unauthorized use, reproduction, or redistribution is strictly prohibited.
+  License: https://github.com/ChamathSadaru/ChamathSadaru/blob/main/LICENSE
+-->
+<svg width="390" height="80" viewBox="0 0 390 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <mask id="containerMaskMobile">
       <rect width="450" height="150" rx="30" fill="white" />
