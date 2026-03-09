@@ -1,0 +1,128 @@
+<svg width="850" height="180" viewBox="0 0 850 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <mask id="roundCorners">
+      <rect width="850" height="180" rx="24" fill="white" />
+    </mask>
+
+    <mask id="boxMask">
+       <rect width="385" height="55" rx="14" fill="white" />
+    </mask>
+
+    <!-- Digital Grid Pattern -->
+    <pattern id="grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Shine Gradient -->
+    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0" />
+      <stop offset="50%" stop-color="white" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Container -->
+  <rect width="850" height="180" rx="24" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
+  <rect width="850" height="180" rx="24" fill="url(#grid)" mask="url(#roundCorners)"/>
+
+  <!-- Border Flow Animation -->
+  <g mask="url(#roundCorners)">
+    <rect x="-100" y="-2" width="200" height="4" fill="#58A6FF" filter="url(#neonGlow)">
+      <animate attributeName="x" from="-200" to="850" dur="4s" repeatCount="indefinite" />
+    </rect>
+    <rect x="848" y="-100" width="4" height="200" fill="#2EA043" filter="url(#neonGlow)">
+      <animate attributeName="y" from="-100" to="180" dur="4s" begin="1s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-100" y="178" width="200" height="4" fill="#58A6FF" filter="url(#neonGlow)">
+       <animate attributeName="x" from="850" to="-200" dur="4s" begin="2s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-2" y="-100" width="4" height="200" fill="#2EA043" filter="url(#neonGlow)">
+      <animate attributeName="y" from="180" to="-100" dur="4s" begin="3s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <g transform="translate(30, 30)">
+    <!-- Column 1 -->
+    <g>
+      <!-- Portfolio Item -->
+      <g>
+        <rect width="385" height="55" rx="14" fill="#161B22" fill-opacity="0.6" stroke="#30363D" stroke-width="1"/>
+        <g mask="url(#boxMask)">
+          <rect width="100" height="55" fill="url(#shineGrad)" transform="skewX(-20)">
+            <animate attributeName="x" from="-150" to="500" dur="3s" repeatCount="indefinite" />
+          </rect>
+        </g>
+        <g transform="translate(15, 12)">
+           <circle cx="15" cy="15" r="11" stroke="#58A6FF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" />
+           </circle>
+           <ellipse cx="15" cy="15" rx="4" ry="11" stroke="#58A6FF" stroke-width="1"/>
+           <line x1="4" y1="15" x2="26" y2="15" stroke="#58A6FF" stroke-width="1"/>
+        </g>
+        <text x="55" y="22" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.05em">PORTFOLIO</text>
+        <text x="55" y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">www.chamathz.com</text>
+      </g>
+
+      <!-- Building Item -->
+      <g transform="translate(0, 65)">
+        <rect width="385" height="55" rx="14" fill="#161B22" fill-opacity="0.6" stroke="#30363D" stroke-width="1"/>
+        <g mask="url(#boxMask)">
+          <rect width="100" height="55" fill="url(#shineGrad)" transform="skewX(-20)">
+            <animate attributeName="x" from="-150" to="500" dur="3s" begin="0.75s" repeatCount="indefinite" />
+          </rect>
+        </g>
+        <g transform="translate(15, 12)">
+           <rect x="7" y="4" width="16" height="22" rx="2" stroke="#79C0FF" stroke-width="1.5">
+              <animateTransform attributeName="transform" type="rotate" from="0 15 15" to="10 15 15" dur="1s" values="0 15 15; 10 15 15; 0 15 15" repeatCount="indefinite" />
+           </rect>
+           <circle cx="15" cy="22" r="1.5" fill="#79C0FF"/>
+        </g>
+        <text x="55" y="22" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.05em">CURRENTLY BUILDING</text>
+        <text x="55" y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700">Smart Gowipala Android App</text>
+      </g>
+    </g>
+
+    <!-- Column 2 -->
+    <g transform="translate(405, 0)">
+      <!-- Reach Me Item -->
+      <g>
+        <rect width="385" height="55" rx="14" fill="#161B22" fill-opacity="0.6" stroke="#30363D" stroke-width="1"/>
+        <g mask="url(#boxMask)">
+          <rect width="100" height="55" fill="url(#shineGrad)" transform="skewX(-20)">
+            <animate attributeName="x" from="-150" to="500" dur="3s" begin="1.5s" repeatCount="indefinite" />
+          </rect>
+        </g>
+        <g transform="translate(15, 15)">
+           <path d="M2 4 H28 V22 H2 Z" stroke="#D14836" stroke-width="1.5" fill="none"/>
+           <path d="M2 4 L15 15 L28 4" stroke="#D14836" stroke-width="1.5" fill="none">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+           </path>
+        </g>
+        <text x="55" y="22" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.05em">REACH ME AT</text>
+        <text x="55" y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">chamathsandaru.se@gmail.com</text>
+      </g>
+
+      <!-- Tech Focus Item -->
+      <g transform="translate(0, 65)">
+        <rect width="385" height="55" rx="14" fill="#161B22" fill-opacity="0.6" stroke="#30363D" stroke-width="1"/>
+        <g mask="url(#boxMask)">
+          <rect width="100" height="55" fill="url(#shineGrad)" transform="skewX(-20)">
+            <animate attributeName="x" from="-150" to="500" dur="3s" begin="2.25s" repeatCount="indefinite" />
+          </rect>
+        </g>
+        <g transform="translate(15, 12)">
+           <path d="M15 4 Q 22 15 15 26 Q 8 15 15 4 Z" stroke="#FFD600" stroke-width="1.5">
+              <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="0.8s" repeatCount="indefinite" />
+           </path>
+        </g>
+        <text x="55" y="22" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.05em">TECH FOCUS</text>
+        <text x="55" y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Next.js • Spring Boot • Android</text>
+      </g>
+    </g>
+  </g>
+</svg>
