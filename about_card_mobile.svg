@@ -20,21 +20,6 @@
   <!-- Main Container -->
   <rect width="450" height="340" rx="30" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
 
-  <!-- Border Flow Animation Mobile -->
-  <g mask="url(#roundCornersMobile)">
-    <rect x="-50" y="-2" width="100" height="4" fill="#58A6FF" filter="url(#neonGlowMobile)">
-      <animate attributeName="x" from="-100" to="450" dur="3s" repeatCount="indefinite" />
-    </rect>
-    <rect x="448" y="-50" width="4" height="100" fill="#2EA043" filter="url(#neonGlowMobile)">
-      <animate attributeName="y" from="-100" to="340" dur="3s" begin="0.75s" repeatCount="indefinite" />
-    </rect>
-    <rect x="-50" y="338" width="100" height="4" fill="#58A6FF" filter="url(#neonGlowMobile)">
-       <animate attributeName="x" from="450" to="-100" dur="3s" begin="1.5s" repeatCount="indefinite" />
-    </rect>
-    <rect x="-2" y="-50" width="4" height="100" fill="#2EA043" filter="url(#neonGlowMobile)">
-      <animate attributeName="y" from="340" to="-100" dur="3s" begin="2.25s" repeatCount="indefinite" />
-    </rect>
-  </g>
 
   <g transform="translate(25, 25)">
     <!-- Portfolio -->

@@ -11,6 +11,21 @@
       <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.1" />
       <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0" />
     </linearGradient>
+
+    <!-- Animated Pulse Gradient for Android Architecture -->
+    <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#58A6FF">
+        <animate attributeName="stop-color" values="#58A6FF; #FFFFFF; #58A6FF" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#1F6FEB" />
+    </radialGradient>
+
+    <filter id="textPulse" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur">
+        <animate attributeName="stdDeviation" values="1; 4; 1" dur="2s" repeatCount="indefinite" />
+      </feGaussianBlur>
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
 
   <!-- Main Container -->
@@ -51,7 +66,7 @@
   <g transform="translate(120, 21)">
     <circle cx="3" cy="5" r="3" fill="#1F6FEB"/>
     <text x="13" y="10" fill="#58A6FF" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.1em">NOW I AM DEEP DIVING</text>
-    <text y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="900">Android <tspan fill="#58A6FF">Architecture</tspan></text>
+    <text y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="900">Android <tspan fill="url(#pulseGradient)" filter="url(#textPulse)">Architecture</tspan></text>
     <text y="58" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="400">Native Java Ecosystem</text>
   </g>
 

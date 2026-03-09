@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="100" viewBox="0 0 900 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glassmorphism Glow Filter -->
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur">
+        <animate attributeName="stdDeviation" values="2; 4; 2" dur="3s" repeatCount="indefinite" />
+      </feGaussianBlur>
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Pulse Gradient for CTA -->
+    <radialGradient id="ctaPulse" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#58A6FF">
+        <animate attributeName="stop-color" values="#58A6FF; #FFFFFF; #58A6FF" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#1F6FEB" />
+    </radialGradient>
+
+    <mask id="roundMask">
+      <rect width="900" height="100" rx="20" fill="white" />
+    </mask>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="900" height="100" rx="20" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  
+  <!-- Subtle Background Watermark -->
+  <g mask="url(#roundMask)">
+    <text x="450" y="52" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="0.8" font-family="Inter, system-ui, sans-serif" font-size="90" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="0.2em">CHAMATHZ</text>
+  </g>
+
+  <!-- Connect Message -->
+  <g transform="translate(450, 42)">
+    <text fill="#FFFFFF" fill-opacity="0.9" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" text-anchor="middle" letter-spacing="0.05em">
+      LET'S BUILD SOMETHING <tspan fill="url(#ctaPulse)" filter="url(#textGlow)">EXTRAORDINARY</tspan>
+    </text>
+    <text y="24" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="middle" letter-spacing="0.01em">Open to innovative collaborations &amp; projects</text>
+  </g>
+
+  <!-- Dynamic Parallax Waves (Seamless Loop Fix) -->
+  <g mask="url(#roundMask)">
+    <!-- Layer 1: Deep Blue (Slow) 
+         Cycle length: 450px. Path length: 1350px (3 cycles). Translation: -450px.
+    -->
+    <path fill="#1F6FEB" fill-opacity="0.12" d="M0 80 C 112.5 70 225 90 337.5 80 C 450 70 562.5 90 675 80 C 787.5 70 900 90 1012.5 80 C 1125 70 1237.5 90 1350 80 V 110 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0,0" to="-337.5,0" dur="12s" repeatCount="indefinite" />
+    </path>
+    <!-- Layer 2: Emerald (Medium) 
+         Cycle length: 450px. Path length: 1350px. Translation: -450px.
+    -->
+    <path fill="#2EA043" fill-opacity="0.1" d="M0 85 C 112.5 75 225 95 337.5 85 C 450 75 562.5 95 675 85 C 787.5 75 900 95 1012.5 85 C 1125 75 1237.5 95 1350 85 V 110 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="-337.5,0" to="0,0" dur="9s" repeatCount="indefinite" />
+    </path>
+    <!-- Layer 3: Bright Blue (Fast) 
+         Cycle length: 450px. Path length: 1350px. Translation: -450px.
+    -->
+    <path fill="#58A6FF" fill-opacity="0.18" d="M0 75 C 112.5 65 225 85 337.5 75 C 450 65 562.5 85 675 75 C 787.5 65 900 85 1012.5 75 C 1125 65 1237.5 85 1350 75 V 110 H 0 Z">
+      <animateTransform attributeName="transform" type="translate" from="-225,0" to="-562.5,0" dur="6s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Floating HUD Particles -->
+  <g fill="#58A6FF" fill-opacity="0.4">
+    <circle r="1.2">
+      <animate attributeName="cx" values="100; 110; 100" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="20; 35; 20" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2; 0.6; 0.2" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle r="1">
+      <animate attributeName="cx" values="800; 785; 800" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="15; 30; 15" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.1; 0.5; 0.1" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

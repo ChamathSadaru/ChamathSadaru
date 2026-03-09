@@ -1,0 +1,38 @@
+<svg width="450" height="150" viewBox="0 0 450 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="containerMaskMobile">
+      <rect width="450" height="150" rx="30" fill="white" />
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="450" height="150" rx="30" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Watermark -->
+  <g mask="url(#containerMaskMobile)">
+    <text x="225" y="65" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="0.8" font-family="Inter, system-ui, sans-serif" font-size="50" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="0.05em">CHAMATHZ</text>
+  </g>
+
+  <!-- Connect Message -->
+  <g transform="translate(225, 60)">
+    <text fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800" text-anchor="middle">LET'S BUILD <tspan fill="#58A6FF" x="0" dy="1.2em">EXTRAORDINARY</tspan></text>
+    <text y="45" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle">Open to innovative collaborations</text>
+  </g>
+
+  <!-- Water Wave Layers Mobile -->
+  <g mask="url(#containerMaskMobile)">
+    <!-- Layer 1 -->
+    <g fill="#1F6FEB" fill-opacity="0.15">
+      <path d="M0 125 Q 56.25 115 112.5 125 T 225 125 T 337.5 125 T 450 125 T 562.5 125 T 675 125 V 150 H 0 Z">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-225,0" dur="8s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Layer 2 -->
+    <g fill="#58A6FF" fill-opacity="0.2">
+      <path d="M0 130 Q 56.25 120 112.5 130 T 225 130 T 337.5 130 T 450 130 T 562.5 130 T 675 130 V 150 H 0 Z">
+        <animateTransform attributeName="transform" type="translate" from="-112,0" to="-337,0" dur="5s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+</svg>

@@ -30,21 +30,6 @@
   <rect width="850" height="180" rx="24" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
   <rect width="850" height="180" rx="24" fill="url(#grid)" mask="url(#roundCorners)"/>
 
-  <!-- Border Flow Animation -->
-  <g mask="url(#roundCorners)">
-    <rect x="-100" y="-2" width="200" height="4" fill="#58A6FF" filter="url(#neonGlow)">
-      <animate attributeName="x" from="-200" to="850" dur="4s" repeatCount="indefinite" />
-    </rect>
-    <rect x="848" y="-100" width="4" height="200" fill="#2EA043" filter="url(#neonGlow)">
-      <animate attributeName="y" from="-100" to="180" dur="4s" begin="1s" repeatCount="indefinite" />
-    </rect>
-    <rect x="-100" y="178" width="200" height="4" fill="#58A6FF" filter="url(#neonGlow)">
-       <animate attributeName="x" from="850" to="-200" dur="4s" begin="2s" repeatCount="indefinite" />
-    </rect>
-    <rect x="-2" y="-100" width="4" height="200" fill="#2EA043" filter="url(#neonGlow)">
-      <animate attributeName="y" from="180" to="-100" dur="4s" begin="3s" repeatCount="indefinite" />
-    </rect>
-  </g>
 
   <g transform="translate(30, 30)">
     <!-- Column 1 -->
