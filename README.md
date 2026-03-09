@@ -1,10 +1,7 @@
 <div align="center">
   <h1>Hey <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Crossed%20Fingers.png" alt="Crossed Fingers" width="30" height="30" /> I'm Chamath Sandaru</h1>
   <p><strong>Software Engineering Student | Full-Stack Developer | IoT Enthusiast</strong></p>
-  <p>
-    <img src="https://img.shields.io/badge/Location-Gampaha%2C%20Sri%20Lanka-blue?style=flat-square&logo=googlemaps&logoColor=white" alt="Location">
-    <img src="https://img.shields.io/badge/Age-22-orange?style=flat-square" alt="Age">
-  </p>
+  <img src="./personal_info.svg" alt="Personal Info HUD" width="400">
 </div>
 
 ---
@@ -13,15 +10,13 @@
 
 <div align="center">
   <p align="center">
-    I am Chamath Sandaru, a Software Engineering student at the Java Institute, specializing in building scalable web architectures and high-performance mobile applications. My core expertise lies in the synergy between Full-Stack Development (Spring Boot, React) and Native Android environments.
+    I am Chamath Sandaru, a Software Engineering student at the Java Institute, specializing in building scalable web architectures and high-performance mobile applications. My core expertise lies in the synergy between Full-Stack Development (Spring Boot, React) and Native Android environments. Beyond software, I have a deep-rooted interest in hardware integration and IoT systems, focusing on how code interacts with the physical world. I am committed to technical precision, clean code, and the continuous pursuit of mastering emerging technologies like Unreal Engine.
   </p>
 
   <picture>
     <source media="(max-width: 600px)" srcset="./skill_progress_mobile.svg">
     <img src="./skill_progress.svg" alt="Android Architecture Progress" width="850">
   </picture>
-
-  <br><br>
 
   <picture>
     <source media="(max-width: 600px)" srcset="./about_card_mobile.svg">
@@ -31,13 +26,7 @@
 
 ---
 
-### 🤖 Intelligence & Frameworks
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,nextjs,react,ts,cpp,py,php,tailwind&perline=9" alt="tech stack" />
-</div>
-
-<br>
+### 🤖 Artificial Intelligence
 
 <div align="center">
   <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=chatgpt&logoColor=white" alt="ChatGPT" />
@@ -46,12 +35,28 @@
   <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
 </div>
 
----
+<br>
 
-### 🛠️ Strategic Tools & Creative Arsenal
+### � IDEs & Dev Environments
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=vscode,idea,git,firebase,arduino,mongodb,mysql,ae,pr,ps,figma&perline=11" alt="tools and creativity" />
+  <img src="https://skillicons.dev/icons?i=vscode,idea&perline=2" alt="IDEs" />
+</div>
+
+<br>
+
+### 🚀 Core Technologies
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,nextjs,react,ts,cpp,py,php,tailwind,git,firebase,arduino,mongodb,mysql&perline=7" alt="tech stack" />
+</div>
+
+<br>
+
+### 🎨 Creativity & Design
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ae,pr,ps,figma&perline=4" alt="creativity tools" />
 </div>
 
 ---
@@ -66,6 +71,16 @@
 <div align="center">
   <br>
   <img src="https://github-readme-stats.vercel.app/api?username=ChamathSadaru&show_icons=true&theme=dracula&hide_border=false&count_private=true" height="165" alt="stats card" />
+</div>
+
+<br>
+
+---
+
+### 🐍 Contribution Activity
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="850" />
 </div>
 
 <br>
@@ -96,7 +111,7 @@
   </a>
 </div>
 
-<br>
+<p align="center"><i>"Code is like humor. When you have to explain it, it’s bad."</i></p>
 
 <div align="center">
   <picture>
@@ -105,4 +120,3 @@
   </picture>
 </div>
 
-<p align="center"><i>"Code is like humor. When you have to explain it, it’s bad."</i></p>
