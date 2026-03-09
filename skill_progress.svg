@@ -1,6 +1,23 @@
 <svg width="900" height="120" viewBox="0 0 900 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glassmorphism Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Linear Gradient for Tags -->
+    <linearGradient id="tagGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
   <!-- Main Container -->
   <rect width="900" height="120" rx="60" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  
+  <!-- Background Watermark -->
+  <text x="450" y="60" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1" font-family="Inter, system-ui, sans-serif" font-size="120" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="-0.02em">ChamathZ</text>
   
   <!-- Icon Container -->
   <g transform="translate(60, 60)">
@@ -15,50 +32,70 @@
         repeatCount="indefinite" />
     </circle>
     
-    <!-- Inner Static Icon -->
-    <rect x="-8" y="-14" width="16" height="28" rx="2" stroke="#58A6FF" stroke-width="2" fill="none"/>
-    <circle cy="10" r="1.5" fill="#58A6FF"/>
+    <!-- Animated Inner Static Icon (Floating Effect) -->
+    <g>
+      <animateTransform 
+        attributeName="transform" 
+        type="translate" 
+        values="0 0; 0 -2; 0 0" 
+        dur="3s" 
+        repeatCount="indefinite" 
+        calcMode="spline" 
+        keySplines="0.4, 0, 0.2, 1; 0.4, 0, 0.2, 1" />
+      <rect x="-8" y="-14" width="16" height="28" rx="2" stroke="#58A6FF" stroke-width="2" fill="none"/>
+      <circle cy="10" r="1.5" fill="#58A6FF"/>
+    </g>
   </g>
   
   <!-- Title Section -->
-  <g transform="translate(120, 40)">
+  <g transform="translate(120, 21)">
     <circle cx="3" cy="5" r="3" fill="#1F6FEB"/>
-    <text x="13" y="10" fill="#58A6FF" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.1em">DEEP DIVE</text>
+    <text x="13" y="10" fill="#58A6FF" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.1em">NOW I AM DEEP DIVING</text>
     <text y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="900">Android <tspan fill="#58A6FF">Architecture</tspan></text>
     <text y="58" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="400">Native Java Ecosystem</text>
   </g>
 
-  <!-- Progress Bar Section -->
-  <g transform="translate(420, 50)">
-    <text y="-8" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800" letter-spacing="0.05em">CORE MASTERY</text>
-    <text x="200" y="-8" fill="#58A6FF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="end">70%</text>
+  <!-- Smart Tech Stack Highlights -->
+  <g transform="translate(420, 20)">
+    <!-- Native Android Tag -->
+    <g transform="translate(0, 0)">
+      <rect width="140" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+        <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <path d="M12 12h4m-2-2v4" stroke="#58A6FF" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Native Android</text>
+    </g>
     
-    <!-- Progress Bar -->
-    <rect y="10" width="200" height="6" rx="3" fill="#30363D"/>
-    <rect y="10" width="140" height="6" rx="3" fill="#1F6FEB">
-      <animate attributeName="width" from="0" to="140" dur="1s" fill="freeze" calcMode="spline" keyTimes="0; 1" keySplines="0.4, 0, 0.2, 1" />
-    </rect>
+    <!-- Firebase Backend Tag (Staggered) -->
+    <g transform="translate(15, 28)">
+      <rect width="140" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+        <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" begin="1s" repeatCount="indefinite" />
+      </rect>
+      <circle cx="14" cy="12" r="2.5" fill="#58A6FF" fill-opacity="0.8"/>
+      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Firebase Backend</text>
+    </g>
+    
+    <!-- Java Backend Tag -->
+    <g transform="translate(0, 56)">
+      <rect width="140" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+        <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" begin="2s" repeatCount="indefinite" />
+      </rect>
+      <path d="M10 12l3 3 5-5" stroke="#58A6FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Java Backend</text>
+    </g>
   </g>
 
   <!-- Utils / Tech Section -->
-  <g transform="translate(660, 48)">
-    <rect width="28" height="28" rx="6" stroke="#30363D" fill="#161B22"/>
-    <text x="6" y="18" fill="#8B949E" font-family="monospace" font-size="10">&lt;/&gt;</text>
-    
-    <rect x="38" y="0" width="28" height="28" rx="6" stroke="#30363D" fill="#161B22"/>
-    <circle cx="52" cy="14" r="5" stroke="#8B949E" fill="none" stroke-width="1.5"/>
-    <circle cx="52" cy="14" r="1.5" fill="#8B949E"/>
+  <g transform="translate(680, 46)">
+    <!-- Next Move Label -->
+    <text x="25" y="18" fill="#484F58" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="end" letter-spacing="0.02em">next move to</text>
 
     <!-- Smart Pill Design with Animated Border -->
-    <g transform="translate(80, 0)">
-      <rect width="100" height="28" rx="14" fill="#161B22" stroke="#1F6FEB" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="10 5">
-        <animate attributeName="stroke-dashoffset" from="0" to="15" dur="1s" repeatCount="indefinite" />
+    <g transform="translate(35, 0)">
+      <rect width="85" height="28" rx="14" fill="#161B22" stroke="#1F6FEB" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="10 5">
+        <animate attributeName="stroke-dashoffset" from="0" to="15" dur="3s" repeatCount="indefinite" />
       </rect>
-      <path d="M12 14C12 11 14 9 17 9H21" stroke="#58A6FF" stroke-width="1.5" stroke-linecap="round"/>
-      <text x="55" y="18" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Spring Boot</text>
+      <text x="42" y="18" fill="#484F58" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">Spring Boot</text>
     </g>
-    
-    <!-- Next Label -->
-    <text x="185" y="18" fill="#30363D" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="400">Next</text>
   </g>
 </svg>
