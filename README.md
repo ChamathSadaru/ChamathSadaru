@@ -17,7 +17,10 @@
 I am Chamath Sandaru, a Software Engineering student at the Java Institute, specializing in building scalable web architectures and high-performance mobile applications. My core expertise lies in the synergy between Full-Stack Development (Spring Boot, React) and Native Android environments. Beyond software, I have a deep-rooted interest in hardware integration and IoT systems, focusing on how code interacts with the physical world. I am committed to technical precision, clean code, and the continuous pursuit of mastering emerging technologies like Unreal Engine.
 
 <p align="center">
-  <img src="./skill_progress.svg" alt="Android Architecture Progress" width="800">
+  <picture>
+    <source media="(max-width: 600px)" srcset="./skill_progress_mobile.svg">
+    <img src="./skill_progress.svg" alt="Android Architecture Progress" width="800">
+  </picture>
 </p>
 
 
