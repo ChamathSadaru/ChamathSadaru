@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="400" height="60" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    Copyright (c) 2026 Chamath Sandaru. All rights reserved.
+    Unauthorized use, copying, or redistribution of this asset is strictly prohibited.
+    Repository: https://github.com/ChamathSadaru/ChamathSadaru
+  -->
   <defs>
     <!-- Glow Filters -->
     <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">

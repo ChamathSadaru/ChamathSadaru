@@ -118,5 +118,13 @@
     <source media="(max-width: 600px)" srcset="./footer_mobile.svg">
     <img src="./footer.svg" alt="Footer" width="850">
   </picture>
+  
+  <br><br>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg?style=flat-square" alt="License: All Rights Reserved" />
+  </a>
+  <br>
+  <sub>© 2026 Chamath Sandaru. All custom SVGs & graphic assets are proprietary and cannot be reused without permission.</sub>
 </div>
+
 
