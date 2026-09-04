@@ -13,11 +13,11 @@
     
     <!-- Linear Gradient for Tags -->
     <linearGradient id="tagGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0" />
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0.02" />
     </linearGradient>
 
-    <!-- Animated Pulse Gradient for Android Architecture -->
+    <!-- Animated Pulse Gradient for Jakarta EE Architecture -->
     <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
       <stop offset="0%" stop-color="#58A6FF">
         <animate attributeName="stop-color" values="#58A6FF; #FFFFFF; #58A6FF" dur="2s" repeatCount="indefinite" />
@@ -52,7 +52,7 @@
         repeatCount="indefinite" />
     </circle>
     
-    <!-- Animated Inner Static Icon (Floating Effect) -->
+    <!-- Animated Enterprise Server Stack Icon (Floating Effect) -->
     <g>
       <animateTransform 
         attributeName="transform" 
@@ -62,8 +62,15 @@
         repeatCount="indefinite" 
         calcMode="spline" 
         keySplines="0.4, 0, 0.2, 1; 0.4, 0, 0.2, 1" />
-      <rect x="-8" y="-14" width="16" height="28" rx="2" stroke="#58A6FF" stroke-width="2" fill="none"/>
-      <circle cy="10" r="1.5" fill="#58A6FF"/>
+      <!-- Server Rack 1 -->
+      <rect x="-12" y="-14" width="24" height="8" rx="2" stroke="#58A6FF" stroke-width="1.8" fill="none"/>
+      <circle cx="7" cy="-10" r="1.5" fill="#2EA043"/>
+      <!-- Server Rack 2 -->
+      <rect x="-12" y="-4" width="24" height="8" rx="2" stroke="#58A6FF" stroke-width="1.8" fill="none"/>
+      <circle cx="7" cy="0" r="1.5" fill="#58A6FF"/>
+      <!-- Server Rack 3 -->
+      <rect x="-12" y="6" width="24" height="8" rx="2" stroke="#58A6FF" stroke-width="1.8" fill="none"/>
+      <circle cx="7" cy="10" r="1.5" fill="#2EA043"/>
     </g>
   </g>
   
@@ -71,51 +78,52 @@
   <g transform="translate(120, 21)">
     <circle cx="3" cy="5" r="3" fill="#1F6FEB"/>
     <text x="13" y="10" fill="#58A6FF" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.1em">NOW I AM DEEP DIVING</text>
-    <text y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="900">Android <tspan fill="url(#pulseGradient)" filter="url(#textPulse)">Architecture</tspan></text>
-    <text y="58" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="400">Native Java Ecosystem</text>
+    <text y="40" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="25" font-weight="900">Jakarta <tspan fill="url(#pulseGradient)" filter="url(#textPulse)">EE Architecture</tspan></text>
+    <text y="58" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="400">Enterprise Java Ecosystem</text>
   </g>
 
-  <!-- Smart Tech Stack Highlights -->
-  <g transform="translate(420, 20)">
-    <!-- Native Android Tag -->
+  <!-- Smart Tech Stack Highlights (Jakarta EE Pillars) -->
+  <g transform="translate(440, 20)">
+    <!-- Point 1: Enterprise Beans (EJB) -->
     <g transform="translate(0, 0)">
-      <rect width="140" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+      <rect width="162" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
         <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" repeatCount="indefinite" />
       </rect>
       <path d="M12 12h4m-2-2v4" stroke="#58A6FF" stroke-width="1.5" stroke-linecap="round"/>
-      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Native Android</text>
+      <text x="22" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Enterprise Beans (EJB)</text>
     </g>
     
-    <!-- Firebase Backend Tag (Staggered) -->
+    <!-- Point 2: JPA & Hibernate (Staggered) -->
     <g transform="translate(15, 28)">
-      <rect width="140" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+      <rect width="162" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
         <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" begin="1s" repeatCount="indefinite" />
       </rect>
       <circle cx="14" cy="12" r="2.5" fill="#58A6FF" fill-opacity="0.8"/>
-      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Firebase Backend</text>
+      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">JPA &amp; Hibernate</text>
     </g>
     
-    <!-- Java Backend Tag -->
+    <!-- Point 3: JAX-RS & Servlets -->
     <g transform="translate(0, 56)">
-      <rect width="140" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+      <rect width="162" height="24" rx="12" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
         <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" begin="2s" repeatCount="indefinite" />
       </rect>
       <path d="M10 12l3 3 5-5" stroke="#58A6FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="24" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">Java Backend</text>
+      <text x="22" y="16" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800">JAX-RS &amp; Servlets</text>
     </g>
   </g>
 
-  <!-- Utils / Tech Section -->
-  <g transform="translate(680, 46)">
+  <!-- Utils / Tech Section (Next Move To Spring Boot) -->
+  <g transform="translate(690, 46)">
     <!-- Next Move Label -->
-    <text x="25" y="18" fill="#484F58" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="end" letter-spacing="0.02em">next move to</text>
+    <text x="25" y="18" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="end" letter-spacing="0.02em">next move to</text>
 
     <!-- Smart Pill Design with Animated Border -->
     <g transform="translate(35, 0)">
-      <rect width="85" height="28" rx="14" fill="#161B22" stroke="#1F6FEB" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="10 5">
+      <rect width="95" height="28" rx="14" fill="#161B22" stroke="#2EA043" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="10 5">
         <animate attributeName="stroke-dashoffset" from="0" to="15" dur="3s" repeatCount="indefinite" />
       </rect>
-      <text x="42" y="18" fill="#484F58" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">Spring Boot</text>
+      <circle cx="12" cy="14" r="2.5" fill="#2EA043"/>
+      <text x="52" y="18" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">Spring Boot</text>
     </g>
   </g>
 </svg>

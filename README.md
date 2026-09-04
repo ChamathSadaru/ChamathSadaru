@@ -15,7 +15,7 @@
 
   <picture>
     <source media="(max-width: 600px)" srcset="./skill_progress_mobile.svg">
-    <img src="./skill_progress.svg" alt="Android Architecture Progress" width="850">
+    <img src="./skill_progress.svg" alt="Jakarta EE Architecture Progress" width="850">
   </picture>
 
   <picture>
