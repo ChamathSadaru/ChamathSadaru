@@ -27,6 +27,11 @@
     <source media="(max-width: 600px)" srcset="./developer_dna_mobile.svg">
     <img src="./developer_dna.svg" alt="Developer DNA Terminal" width="850">
   </picture>
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./stickman_dev_mobile.svg">
+    <img src="./stickman_dev.svg" alt="Developer Life in a Nutshell" width="850">
+  </picture>
 </div>
 
 ---
