@@ -23,6 +23,43 @@
       <stop offset="0%" stop-color="#161B22" />
       <stop offset="100%" stop-color="#0D1117" />
     </linearGradient>
+
+    <!-- Pulsing Shimmer for Developer Name -->
+    <linearGradient id="nameShimmerMob" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF">
+        <animate attributeName="stop-color" values="#FFFFFF; #79C0FF; #FFFFFF" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#A5D6FF">
+        <animate attributeName="stop-color" values="#A5D6FF; #FFFFFF; #A5D6FF" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Warm Radiant Glow for Current Project -->
+    <linearGradient id="goldPulseMob" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F2CC60">
+        <animate attributeName="stop-color" values="#F2CC60; #FFA611; #F2CC60" dur="2.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#FFE885">
+        <animate attributeName="stop-color" values="#FFE885; #F2CC60; #FFE885" dur="2.5s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Active Status Breathing Gradient -->
+    <linearGradient id="statusPulseMob" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7EE787">
+        <animate attributeName="stop-color" values="#7EE787; #58A6FF; #7EE787" dur="3.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#2EA043">
+        <animate attributeName="stop-color" values="#2EA043; #7EE787; #2EA043" dur="3.5s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Command Typewriter ClipPath -->
+    <clipPath id="cmdClipMobile">
+      <rect x="0" y="-14" width="0" height="22">
+        <animate attributeName="width" values="0; 0; 220; 220; 0" keyTimes="0; 0.01; 0.07; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
   </defs>
 
   <!-- Container Base -->
@@ -31,6 +68,13 @@
 
   <!-- Watermark -->
   <text transform="translate(40, 240) rotate(-90)" fill="none" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="1.2" font-family="'Inter', system-ui, sans-serif" font-size="90" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="0.1em">CHAMATHZ</text>
+
+  <!-- Futuristic CRT Scanline Glide -->
+  <g mask="url(#terminalMaskMobile)">
+    <rect x="0" y="42" width="450" height="3" fill="#58A6FF" fill-opacity="0.08">
+      <animate attributeName="y" values="42; 450; 42" dur="5s" repeatCount="indefinite" />
+    </rect>
+  </g>
 
   <!-- Terminal Header Bar -->
   <path d="M0 20 C0 8.954 8.954 0 20 0 H430 C441.046 0 450 8.954 450 20 V42 H0 V20 Z" fill="url(#headerGradMobile)"/>
@@ -59,67 +103,138 @@
   <!-- Terminal Content Body -->
   <g transform="translate(20, 68)" font-family="'Fira Code', Consolas, monospace" font-size="12">
     <!-- Prompt line -->
-    <text y="0">
-      <tspan fill="#58A6FF" font-weight="700">chamath</tspan><tspan fill="#8B949E">:$ </tspan><tspan fill="#E6EDF3">cat developer_dna.json</tspan>
-    </text>
+    <g transform="translate(0, 0)">
+      <text y="0">
+        <tspan fill="#58A6FF" font-weight="700">chamath</tspan><tspan fill="#8B949E">:$ </tspan>
+      </text>
+      <g transform="translate(75, 0)">
+        <g clip-path="url(#cmdClipMobile)">
+          <text y="0" fill="#E6EDF3">cat developer_dna.json</text>
+        </g>
+      </g>
+    </g>
 
-    <text y="24" fill="#8B949E">{</text>
+    <!-- Line 0: { -->
+    <g transform="translate(0, 24)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.08; 0.09; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text fill="#8B949E">{</text>
+    </g>
 
-    <text y="46">
-      <tspan fill="#79C0FF">  "dev"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">"Chamath Sandaru"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
+    <!-- Line 1: dev -->
+    <g transform="translate(0, 46)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.11; 0.12; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "dev"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="url(#nameShimmerMob)" font-weight="700">"Chamath Sandaru"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
 
-    <text y="68">
-      <tspan fill="#79C0FF">  "role"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">"Software Engineering Student"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
+    <!-- Line 2: role -->
+    <g transform="translate(0, 68)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.14; 0.15; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "role"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">"Software Engineering Student"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
 
-    <text y="90">
-      <tspan fill="#79C0FF">  "institute"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">"Java Institute (JIAT)"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
+    <!-- Line 3: institute -->
+    <g transform="translate(0, 90)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.17; 0.18; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "institute"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">"Java Institute (JIAT)"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
 
-    <text y="112">
-      <tspan fill="#79C0FF">  "primary_stack"</tspan><tspan fill="#8B949E">: [</tspan>
-    </text>
-    <text y="132">
-      <tspan fill="#58A6FF">    "Native Android (Java/Kotlin)"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
-    <text y="152">
-      <tspan fill="#58A6FF">    "Spring Boot &amp; RESTful APIs"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
-    <text y="172">
-      <tspan fill="#58A6FF">    "Next.js, React &amp; Tailwind"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
-    <text y="192">
-      <tspan fill="#58A6FF">    "Hardware Sync &amp; Arduino/IoT"</tspan>
-    </text>
-    <text y="212" fill="#8B949E">  ],</text>
+    <!-- Line 4: primary_stack -->
+    <g transform="translate(0, 112)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.20; 0.21; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "primary_stack"</tspan><tspan fill="#8B949E">: [</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 132)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.21; 0.22; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#58A6FF">    "Native Android (Java/Kotlin)"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 152)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.22; 0.23; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#58A6FF">    "Spring Boot &amp; RESTful APIs"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 172)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.23; 0.24; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#58A6FF">    "Next.js, React &amp; Tailwind"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 192)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.24; 0.25; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#58A6FF">    "Hardware Sync &amp; Arduino/IoT"</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 212)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.25; 0.26; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text fill="#8B949E">  ],</text>
+    </g>
 
-    <text y="234">
-      <tspan fill="#79C0FF">  "building_now"</tspan><tspan fill="#8B949E">: </tspan>
-    </text>
-    <text y="254">
-      <tspan fill="#F2CC60">    "Smart Gowipala App"</tspan><tspan fill="#8B949E">,</tspan>
-    </text>
+    <!-- Line 5: building_now -->
+    <g transform="translate(0, 234)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.27; 0.28; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "building_now"</tspan><tspan fill="#8B949E">: </tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 254)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.28; 0.29; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="url(#goldPulseMob)" font-weight="700">    "Smart Gowipala App"</tspan><tspan fill="#8B949E">,</tspan>
+      </text>
+    </g>
 
-    <text y="276">
-      <tspan fill="#79C0FF">  "methodologies"</tspan><tspan fill="#8B949E">: [</tspan>
-    </text>
-    <text y="296">
-      <tspan fill="#D18859">    "Clean Architecture", "MVVM"</tspan>
-    </text>
-    <text y="316" fill="#8B949E">  ],</text>
+    <!-- Line 6: methodologies -->
+    <g transform="translate(0, 276)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.30; 0.31; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "methodologies"</tspan><tspan fill="#8B949E">: [</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 296)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.31; 0.32; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#D18859">    "Clean Architecture", "MVVM"</tspan>
+      </text>
+    </g>
+    <g transform="translate(0, 316)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.32; 0.33; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text fill="#8B949E">  ],</text>
+    </g>
 
-    <text y="338">
-      <tspan fill="#79C0FF">  "status"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#7EE787">"Ready to Innovate"</tspan>
-    </text>
+    <!-- Line 7: status -->
+    <g transform="translate(0, 338)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.34; 0.35; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#79C0FF">  "status"</tspan><tspan fill="#8B949E">: </tspan><tspan fill="url(#statusPulseMob)" font-weight="700">"Ready to Innovate"</tspan>
+      </text>
+    </g>
 
-    <text y="360" fill="#8B949E">}</text>
+    <!-- Line 8: } -->
+    <g transform="translate(0, 360)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.36; 0.37; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text fill="#8B949E">}</text>
+    </g>
 
-    <text y="384">
-      <tspan fill="#58A6FF" font-weight="700">chamath</tspan><tspan fill="#8B949E">:$ </tspan>
-    </text>
-    <rect x="100" y="373" width="7" height="14" rx="1" fill="#58A6FF">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </rect>
+    <!-- Trailing prompt with cursor -->
+    <g transform="translate(0, 384)">
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.38; 0.39; 0.95; 1" dur="11s" repeatCount="indefinite" />
+      <text>
+        <tspan fill="#58A6FF" font-weight="700">chamath</tspan><tspan fill="#8B949E">:$ </tspan>
+      </text>
+      <rect x="75" y="-11" width="7" height="14" rx="1" fill="#58A6FF">
+        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+      </rect>
+    </g>
   </g>
 </svg>
