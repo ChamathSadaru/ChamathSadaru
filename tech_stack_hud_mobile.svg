@@ -1,0 +1,224 @@
+<svg width="450" height="690" viewBox="0 0 450 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    Copyright (c) 2026 Chamath Sandaru. All rights reserved.
+    Unauthorized use, copying, or redistribution of this asset is strictly prohibited.
+    Repository: https://github.com/ChamathSadaru/ChamathSadaru
+  -->
+  <defs>
+    <filter id="hudBlueGlowMobile" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <mask id="hudRoundCornersMobile">
+      <rect width="450" height="690" rx="24" fill="white" />
+    </mask>
+
+    <pattern id="hudGridMobile" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="0.5"/>
+    </pattern>
+
+    <linearGradient id="hudShineMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0" />
+      <stop offset="50%" stop-color="white" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="chipGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#161B22" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="450" height="690" rx="24" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <rect width="450" height="690" rx="24" fill="url(#hudGridMobile)" mask="url(#hudRoundCornersMobile)"/>
+
+  <!-- Watermark -->
+  <text transform="translate(45, 345) rotate(-90)" fill="none" stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="1.2" font-family="'Inter', system-ui, sans-serif" font-size="95" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="0.15em">CHAMATHZ</text>
+
+  <!-- Animated Shine Sweep -->
+  <g mask="url(#hudRoundCornersMobile)">
+    <rect width="150" height="690" fill="url(#hudShineMobile)" transform="skewX(-25)">
+      <animate attributeName="x" from="-250" to="650" dur="5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(25, 20)">
+    <circle cx="5" cy="8" r="4" fill="#58A6FF">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="18" y="11" fill="#58A6FF" font-family="'Inter', system-ui, sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.1em">TECH ARSENAL // TELEMETRY</text>
+    <text x="0" y="30" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="800">Engineering Capabilities Matrix</text>
+  </g>
+
+  <!-- ================= SECTION 01: CORE & LANGUAGES ================= -->
+  <g transform="translate(25, 62)">
+    <rect width="400" height="142" rx="14" fill="#161B22" fill-opacity="0.5" stroke="#30363D" stroke-width="1"/>
+    <text x="16" y="24" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.06em">// 01. CORE &amp; PROGRAMMING</text>
+    <line x1="16" y1="32" x2="384" y2="32" stroke="#30363D" stroke-width="0.75" stroke-dasharray="4 3"/>
+
+    <!-- Row 1 -->
+    <g transform="translate(16, 44)">
+      <rect width="78" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#D18859"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Java</text>
+    </g>
+    <g transform="translate(104, 44)">
+      <rect width="108" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">TypeScript</text>
+    </g>
+    <g transform="translate(222, 44)">
+      <rect width="88" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#FFD600"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Python</text>
+    </g>
+    <g transform="translate(320, 44)">
+      <rect width="64" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">C++</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(16, 86)">
+      <rect width="72" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#A371F7"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">PHP</text>
+    </g>
+    <g transform="translate(98, 86)">
+      <rect width="108" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#FFD600"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">JavaScript</text>
+    </g>
+    <g transform="translate(216, 86)">
+      <rect width="168" height="30" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="12" cy="15" r="2.5" fill="#2EA043"/>
+      <text x="22" y="19" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">Clean Architecture</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 02: BACKEND & WEB ================= -->
+  <g transform="translate(25, 216)">
+    <rect width="400" height="142" rx="14" fill="#161B22" fill-opacity="0.5" stroke="#30363D" stroke-width="1"/>
+    <text x="16" y="24" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.06em">// 02. BACKEND &amp; WEB ARCHITECTURE</text>
+    <line x1="16" y1="32" x2="384" y2="32" stroke="#30363D" stroke-width="0.75" stroke-dasharray="4 3"/>
+
+    <!-- Row 1 -->
+    <g transform="translate(16, 44)">
+      <rect width="118" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#2EA043" stroke-width="1" stroke-opacity="0.5"/>
+      <circle cx="12" cy="15" r="2.5" fill="#2EA043"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Spring Boot</text>
+    </g>
+    <g transform="translate(144, 44)">
+      <rect width="90" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#FFFFFF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Next.js</text>
+    </g>
+    <g transform="translate(244, 44)">
+      <rect width="82" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">React</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(16, 86)">
+      <rect width="90" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="10" cy="15" r="2.5" fill="#38BDF8"/>
+      <text x="20" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="700">Tailwind</text>
+    </g>
+    <g transform="translate(116, 86)">
+      <rect width="110" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">REST APIs</text>
+    </g>
+    <g transform="translate(236, 86)">
+      <rect width="148" height="30" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">Microservices</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 03: MOBILE & DATA ================= -->
+  <g transform="translate(25, 370)">
+    <rect width="400" height="142" rx="14" fill="#161B22" fill-opacity="0.5" stroke="#30363D" stroke-width="1"/>
+    <text x="16" y="24" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.06em">// 03. MOBILE, CLOUD &amp; DATA</text>
+    <line x1="16" y1="32" x2="384" y2="32" stroke="#30363D" stroke-width="0.75" stroke-dasharray="4 3"/>
+
+    <!-- Row 1 -->
+    <g transform="translate(16, 44)">
+      <rect width="138" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#3DDC84"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Native Android</text>
+    </g>
+    <g transform="translate(164, 44)">
+      <rect width="102" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#FFA611" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#FFA611"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Firebase</text>
+    </g>
+    <g transform="translate(276, 44)">
+      <rect width="108" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#47A248"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">MongoDB</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(16, 86)">
+      <rect width="88" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">MySQL</text>
+    </g>
+    <g transform="translate(114, 86)">
+      <rect width="144" height="30" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">MVVM Pattern</text>
+    </g>
+    <g transform="translate(268, 86)">
+      <rect width="116" height="30" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="12" cy="15" r="2.5" fill="#3DDC84"/>
+      <text x="22" y="19" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">Room DB</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 04: IOT & CREATIVE ================= -->
+  <g transform="translate(25, 524)">
+    <rect width="400" height="142" rx="14" fill="#161B22" fill-opacity="0.5" stroke="#30363D" stroke-width="1"/>
+    <text x="16" y="24" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.06em">// 04. IOT, HARDWARE &amp; CREATIVE</text>
+    <line x1="16" y1="32" x2="384" y2="32" stroke="#30363D" stroke-width="0.75" stroke-dasharray="4 3"/>
+
+    <!-- Row 1 -->
+    <g transform="translate(16, 44)">
+      <rect width="128" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#00979D" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#00979D"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Arduino / IoT</text>
+    </g>
+    <g transform="translate(154, 44)">
+      <rect width="86" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#F24E1E" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#F24E1E"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Figma</text>
+    </g>
+    <g transform="translate(250, 44)">
+      <rect width="134" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#F05032" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#F05032"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">Git / GitHub</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(16, 86)">
+      <rect width="80" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#EA77FF" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="12" cy="15" r="2.5" fill="#EA77FF"/>
+      <text x="22" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="700">PR Pro</text>
+    </g>
+    <g transform="translate(106, 86)">
+      <rect width="70" height="30" rx="6" fill="url(#chipGradMobile)" stroke="#9999FF" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="10" cy="15" r="2.5" fill="#9999FF"/>
+      <text x="18" y="19" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="700">AE</text>
+    </g>
+    <g transform="translate(186, 86)">
+      <rect width="198" height="30" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="12" cy="15" r="2.5" fill="#58A6FF"/>
+      <text x="22" y="19" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">Copilot / Gemini / Cursor</text>
+    </g>
+  </g>
+</svg>

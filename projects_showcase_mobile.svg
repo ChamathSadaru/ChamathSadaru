@@ -1,0 +1,158 @@
+<svg width="450" height="430" viewBox="0 0 450 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    Copyright (c) 2026 Chamath Sandaru. All rights reserved.
+    Unauthorized use, copying, or redistribution of this asset is strictly prohibited.
+    Repository: https://github.com/ChamathSadaru/ChamathSadaru
+  -->
+  <defs>
+    <filter id="projGlowMobile" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <mask id="projMaskMobile">
+      <rect width="450" height="430" rx="20" fill="white" />
+    </mask>
+
+    <pattern id="projGridMobile" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="0.5"/>
+    </pattern>
+
+    <linearGradient id="projShineMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0" />
+      <stop offset="50%" stop-color="white" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="projTagGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#161B22" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="450" height="430" rx="20" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <rect width="450" height="430" rx="20" fill="url(#projGridMobile)" mask="url(#projMaskMobile)"/>
+
+  <!-- Watermark -->
+  <text transform="translate(45, 215) rotate(-90)" fill="none" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="1.2" font-family="'Inter', system-ui, sans-serif" font-size="95" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="0.12em">FEATURED</text>
+
+  <!-- Animated Shine Sweep -->
+  <g mask="url(#projMaskMobile)">
+    <rect width="150" height="430" fill="url(#projShineMobile)" transform="skewX(-25)">
+      <animate attributeName="x" from="-250" to="650" dur="5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Top Section Label -->
+  <g transform="translate(25, 18)">
+    <circle cx="5" cy="6" r="3.5" fill="#58A6FF">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="16" y="9" fill="#58A6FF" font-family="'Inter', system-ui, sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.1em">SHOWCASE // HIGHLIGHTED SYSTEMS</text>
+  </g>
+
+  <!-- ================= CARD 01: SMART GOWIPALA ================= -->
+  <g transform="translate(25, 36)">
+    <rect width="400" height="180" rx="14" fill="#161B22" fill-opacity="0.75" stroke="#30363D" stroke-width="1"/>
+    
+    <!-- Top Meta Row -->
+    <g transform="translate(18, 20)">
+      <circle cx="4" cy="5" r="3" fill="#2EA043">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="14" y="9" fill="#2EA043" font-family="'Fira Code', Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.05em">ACTIVE BUILD</text>
+      <text x="364" y="9" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="9.5" font-weight="600" text-anchor="end">// IOT &amp; ANDROID</text>
+    </g>
+
+    <!-- Title -->
+    <g transform="translate(18, 48)">
+      <path d="M2 4 C2 2.9 2.9 2 4 2 H8 L10 5 H18 C19.1 5 20 5.9 20 7 V15 C20 16.1 19.1 17 18 17 H4 C2.9 17 2 16.1 2 15 Z" fill="none" stroke="#58A6FF" stroke-width="1.6"/>
+      <text x="28" y="14" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="17" font-weight="800">Smart Gowipala</text>
+    </g>
+
+    <!-- Description -->
+    <text x="18" y="90" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="400">
+      <tspan x="18" dy="0">Agricultural IoT ecosystem featuring real-time</tspan>
+      <tspan x="18" dy="17">soil telemetry, cloud sync &amp; Android app control.</tspan>
+    </text>
+
+    <!-- Tech Stack Chips -->
+    <g transform="translate(18, 134)">
+      <rect width="98" height="26" rx="6" fill="url(#projTagGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="10" cy="13" r="2" fill="#3DDC84"/>
+      <text x="18" y="17" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">Native Android</text>
+
+      <g transform="translate(104, 0)">
+        <rect width="84" height="26" rx="6" fill="url(#projTagGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+        <circle cx="10" cy="13" r="2" fill="#00979D"/>
+        <text x="18" y="17" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">IoT / ESP32</text>
+      </g>
+
+      <g transform="translate(194, 0)">
+        <rect width="72" height="26" rx="6" fill="url(#projTagGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+        <circle cx="10" cy="13" r="2" fill="#FFA611"/>
+        <text x="18" y="17" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">Firebase</text>
+      </g>
+
+      <g transform="translate(272, 0)">
+        <rect width="84" height="26" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="10" cy="13" r="2" fill="#58A6FF"/>
+        <text x="18" y="17" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">MVVM Arch</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= CARD 02: SUPPLY CHAIN ================= -->
+  <g transform="translate(25, 230)">
+    <rect width="400" height="180" rx="14" fill="#161B22" fill-opacity="0.75" stroke="#30363D" stroke-width="1"/>
+    
+    <!-- Top Meta Row -->
+    <g transform="translate(18, 20)">
+      <circle cx="4" cy="5" r="3" fill="#58A6FF">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="14" y="9" fill="#58A6FF" font-family="'Fira Code', Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.05em">JAVA ENTERPRISE</text>
+      <text x="364" y="9" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="9.5" font-weight="600" text-anchor="end">// CORE ARCHITECTURE</text>
+    </g>
+
+    <!-- Title -->
+    <g transform="translate(18, 48)">
+      <path d="M2 5 C2 3.5 6 2 11 2 C16 2 20 3.5 20 5 C20 6.5 16 8 11 8 C6 8 2 6.5 2 5 Z" fill="none" stroke="#2EA043" stroke-width="1.5"/>
+      <path d="M2 9 C2 10.5 6 12 11 12 C16 12 20 10.5 20 9" fill="none" stroke="#2EA043" stroke-width="1.5"/>
+      <path d="M2 13 C2 14.5 6 16 11 16 C16 16 20 14.5 20 13" fill="none" stroke="#2EA043" stroke-width="1.5"/>
+      <text x="28" y="14" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="17" font-weight="800">SupplyChain System</text>
+    </g>
+
+    <!-- Description -->
+    <text x="18" y="90" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="11.5" font-weight="400">
+      <tspan x="18" dy="0">High-concurrency supply chain architecture with</tspan>
+      <tspan x="18" dy="17">clean OOP, automated workflows &amp; relational DB.</tspan>
+    </text>
+
+    <!-- Tech Stack Chips -->
+    <g transform="translate(18, 134)">
+      <rect width="70" height="26" rx="6" fill="url(#projTagGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="10" cy="13" r="2" fill="#D18859"/>
+      <text x="18" y="17" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">Java SE</text>
+
+      <g transform="translate(76, 0)">
+        <rect width="90" height="26" rx="6" fill="url(#projTagGradMobile)" stroke="#2EA043" stroke-width="1" stroke-opacity="0.5"/>
+        <circle cx="10" cy="13" r="2" fill="#2EA043"/>
+        <text x="18" y="17" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">Spring Boot</text>
+      </g>
+
+      <g transform="translate(172, 0)">
+        <rect width="66" height="26" rx="6" fill="url(#projTagGradMobile)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4"/>
+        <circle cx="10" cy="13" r="2" fill="#58A6FF"/>
+        <text x="18" y="17" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">MySQL</text>
+      </g>
+
+      <g transform="translate(244, 0)">
+        <rect width="110" height="26" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="10" cy="13" r="2" fill="#2EA043"/>
+        <text x="18" y="17" fill="#8B949E" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700">Clean Arch</text>
+      </g>
+    </g>
+  </g>
+</svg>

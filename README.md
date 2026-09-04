@@ -22,11 +22,29 @@
     <source media="(max-width: 600px)" srcset="./about_card_mobile.svg">
     <img src="./about_card.svg" alt="About Chamath" width="850">
   </picture>
+
+  <picture>
+    <source media="(max-width: 600px)" srcset="./developer_dna_mobile.svg">
+    <img src="./developer_dna.svg" alt="Developer DNA Terminal" width="850">
+  </picture>
 </div>
 
 ---
 
-### 🤖 Artificial Intelligence
+### 🛠️ Active Tech Arsenal & Architecture
+
+<div align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="./tech_stack_hud_mobile.svg">
+    <img src="./tech_stack_hud.svg" alt="Modular Tech Arsenal HUD" width="850">
+  </picture>
+</div>
+
+<br>
+
+<details>
+<summary align="center"><b>🔍 View Quick Icons & Badges</b></summary>
+<br>
 
 <div align="center">
   <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=chatgpt&logoColor=white" alt="ChatGPT" />
@@ -37,15 +55,11 @@
 
 <br>
 
-### � IDEs & Dev Environments
-
 <div align="center">
   <img src="https://skillicons.dev/icons?i=vscode,idea&perline=2" alt="IDEs" />
 </div>
 
 <br>
-
-### 🚀 Core Technologies
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=java,spring,nextjs,react,ts,cpp,py,php,tailwind,git,firebase,arduino,mongodb,mysql&perline=7" alt="tech stack" />
@@ -53,13 +67,24 @@
 
 <br>
 
-### 🎨 Creativity & Design
-
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ae,pr,ps,figma&perline=4" alt="creativity tools" />
 </div>
 
+</details>
+
 ---
+
+### 🚀 Highlighted Engineering Projects
+
+<div align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="./projects_showcase_mobile.svg">
+    <img src="./projects_showcase.svg" alt="Featured Projects Showcase" width="850">
+  </picture>
+</div>
+
+<br>
 
 ### 📊 Performance Metrics & Activity
 
