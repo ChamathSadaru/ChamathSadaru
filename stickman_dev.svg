@@ -1,277 +1,674 @@
 <svg width="850" height="155" viewBox="0 0 850 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 
+  <!--
     Copyright (c) 2026 Chamath Sandaru. All rights reserved.
     Unauthorized use, copying, or redistribution of this asset is strictly prohibited.
     Repository: https://github.com/ChamathSadaru/ChamathSadaru
   -->
   <defs>
-    <!-- Glow Filters -->
-    <filter id="stickGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    <filter id="g1" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="g2" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="g3" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
     </filter>
 
-    <filter id="screenGlowFilter" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <mask id="m"><rect width="850" height="155" rx="18" fill="white"/></mask>
 
-    <mask id="stageMask">
-      <rect width="850" height="155" rx="18" fill="white" />
-    </mask>
-
-    <!-- Digital Floor Pattern -->
-    <pattern id="stickGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="0.5"/>
+    <pattern id="gr" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0L0 0 0 22" fill="none" stroke="#fff" stroke-opacity=".025" stroke-width=".5"/>
     </pattern>
 
-    <!-- Laptop Screen Glow Cone Gradient -->
-    <linearGradient id="laptopCone" x1="100%" y1="0%" x2="0%" y2="50%">
-      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- Floor Laser Line Gradient -->
-    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0" />
-      <stop offset="50%" stop-color="#58A6FF" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0" />
+    <linearGradient id="lz" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#58A6FF" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <!-- Container Base -->
+  <!-- Background -->
   <rect width="850" height="155" rx="18" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
-  <rect width="850" height="155" rx="18" fill="url(#stickGrid)" mask="url(#stageMask)"/>
+  <rect width="850" height="155" rx="18" fill="url(#gr)" mask="url(#m)"/>
+  <text x="425" y="80" fill="none" stroke="#fff" stroke-opacity=".02" stroke-width="1"
+    font-family="Inter,sans-serif" font-size="60" font-weight="900"
+    text-anchor="middle" dominant-baseline="central" letter-spacing=".2em">CHAMATHZ DEV</text>
 
-  <!-- Watermark -->
-  <text x="425" y="85" fill="none" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="1.2" font-family="'Inter', system-ui, sans-serif" font-size="75" font-weight="900" text-anchor="middle" dominant-baseline="central" letter-spacing="0.25em">CHAMATHZ • DEV LAB</text>
-
-  <!-- Ground Floor Line -->
-  <line x1="30" y1="125" x2="820" y2="125" stroke="#30363D" stroke-width="1.5"/>
-  <!-- Animated Floor Laser Pulse -->
-  <rect x="0" y="124" width="120" height="2" fill="url(#laserGrad)">
-    <animate attributeName="x" from="-120" to="850" dur="4s" repeatCount="indefinite" />
-  </rect>
-
-  <!-- Top Banner Tag -->
-  <g transform="translate(30, 20)">
-    <rect width="180" height="20" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-    <circle cx="12" cy="10" r="3.5" fill="#2EA043">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="22" y="14" fill="#8B949E" font-family="'Fira Code', Consolas, monospace" font-size="9.5" font-weight="600" letter-spacing="0.04em">DEV_SIMULATOR // v2.6</text>
+  <!-- Floor line + laser sweep -->
+  <line x1="40" y1="126" x2="810" y2="126" stroke="#30363D" stroke-width="1.2"/>
+  <g mask="url(#m)">
+    <rect y="124.5" width="120" height="2" fill="url(#lz)">
+      <animate attributeName="x" from="-120" to="860" dur="3s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
-  <!-- ================= MASTER ACTOR ROOT (12s LOOP) ================= -->
-  <!-- 
-    TIMELINE OVERVIEW (dur="12s"):
-    0.0s - 2.8s  : Walking in from left to center (x = 390)
-    2.8s - 3.4s  : Stop, snap fingers -> ✨ Sparkle pops up!
-    3.2s - 11.2s : Chair materializes, sitting down
-    3.8s - 11.2s : Laptop spawns & opens (Screen glow on face)
-    4.2s - 11.0s : Furious typing jitter, floating code & coffee
-    6.0s - 10.5s : Funny Speech / Thought Bubble pops up
-    11.2s - 12.0s: Fade out and reset smoothly
+  <!-- Status pill -->
+  <g transform="translate(26,15)">
+    <rect width="165" height="19" rx="9.5" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <circle cx="11" cy="9.5" r="3.2" fill="#2EA043">
+      <animate attributeName="opacity" values=".4;1;.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="20" y="13.5" fill="#8B949E" font-family="'Fira Code',monospace"
+      font-size="8.5" font-weight="600" letter-spacing=".04em">DEV_SIMULATOR // LIVE</text>
+  </g>
+
+  <!--
+  ======================================================
+  MASTER TIMELINE: dur="13s"
+  0.0s–0.3s  : Walk fade-in
+  0.3s–3.1s  : Walk (x=60→415)
+  3.1s–3.5s  : Walk fade-out
+  3.3s–4.0s  : Sparkle snap
+  3.5s–4.0s  : Chair + Sitting spawn
+  4.0s–11.5s : Typing, laptop, particles, bubbles
+  11.5s–12.5s: All fade-out
+  12.5s–13.0s: Reset
+  ======================================================
+  Keyframe fractions (X/13):
+  0.023 = 0.3s  | 0.046 = 0.6s  | 0.238 = 3.1s
+  0.254 = 3.3s  | 0.269 = 3.5s  | 0.292 = 3.8s
+  0.308 = 4.0s  | 0.338 = 4.4s  | 0.885 = 11.5s
+  0.923 = 12.0s | 0.962 = 12.5s
   -->
 
-  <!-- ================= 1. WALKING ACTOR (Visible 0.0s to 2.8s) ================= -->
-  <g id="walkingStickman">
-    <!-- Fade out at 2.8s -->
-    <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.23; 0.24; 0.95; 1" dur="12s" repeatCount="indefinite" />
-    
-    <!-- Translation across the floor to center (x=390) -->
+  <!-- ===================================================
+       WALKING STICKMAN
+  =================================================== -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.023;.046;.238;.269;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines=".4 0 .6 1;.4 0 .6 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+
+    <!-- X track: walk 60→415 -->
     <g>
-      <animateTransform attributeName="transform" type="translate" values="50 55; 390 55; 390 55; 390 55" keyTimes="0; 0.23; 0.95; 1" dur="12s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate"
+        values="60 126;60 126;415 126;415 126;415 126;60 126"
+        keyTimes="0;.046;.238;.269;.962;1"
+        dur="13s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0 0 1 1;.25 0 .75 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
 
-      <!-- Head Bouncing with Walk Cycle -->
+      <!-- Y head-bob (half stride period) -->
       <g>
-        <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 0; 0 -3; 0 0" dur="0.6s" repeatCount="indefinite" />
-        
-        <!-- Head -->
-        <circle cx="0" cy="0" r="9" stroke="#58A6FF" stroke-width="2.2" fill="#0D1117" filter="url(#stickGlow)"/>
-        <!-- Eyes / Visor -->
-        <circle cx="3" cy="-1" r="1.5" fill="#58A6FF"/>
-        
-        <!-- Torso -->
-        <line x1="0" y1="9" x2="0" y2="40" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0;0 -2;0 0;0 -2;0 0"
+          dur=".65s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1"/>
 
-        <!-- Left Arm (Walking Swing) -->
-        <g transform="translate(0, 16)">
-          <animateTransform attributeName="transform" type="rotate" values="25 0 0; -25 0 0; 25 0 0" dur="0.6s" repeatCount="indefinite" />
-          <line x1="0" y1="0" x2="8" y2="20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+        <!-- Ground shadow -->
+        <ellipse cx="0" cy="2" rx="12" ry="2.5" fill="#1F6FEB" fill-opacity=".12"/>
+
+        <!-- HEAD -->
+        <circle cx="0" cy="-66" r="10"
+          stroke="#58A6FF" stroke-width="2.2" fill="#0D1117" filter="url(#g3)"/>
+        <!-- Eye (face right) -->
+        <circle cx="4" cy="-67" r="1.6" fill="#58A6FF"/>
+        <!-- Highlight -->
+        <circle cx="5.5" cy="-68.5" r=".7" fill="#FFFFFF" fill-opacity=".8"/>
+
+        <!-- NECK -->
+        <line x1="0" y1="-56" x2="0" y2="-50"
+          stroke="#E6EDF3" stroke-width="1.8" stroke-linecap="round"/>
+
+        <!-- TORSO -->
+        <line x1="0" y1="-50" x2="0" y2="-30"
+          stroke="#E6EDF3" stroke-width="2.2" stroke-linecap="round"/>
+
+        <!-- Hip disc -->
+        <ellipse cx="0" cy="-30" rx="4" ry="2" fill="#1F6FEB" fill-opacity=".35"/>
+
+        <!-- LEFT ARM – pivot at (-9, -46) -->
+        <g transform="translate(-9,-46)">
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="-24;24;-24" dur=".65s" repeatCount="indefinite"
+              calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+            <line x1="0" y1="0" x2="0" y2="17"
+              stroke="#E6EDF3" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="0" cy="17" r="1.8" fill="#161B22" stroke="#8B949E" stroke-width="1"/>
+            <g transform="translate(0,17)">
+              <g>
+                <animateTransform attributeName="transform" type="rotate"
+                  values="9;-5;9" dur=".65s" repeatCount="indefinite"
+                  calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+                <line x1="0" y1="0" x2="0" y2="14"
+                  stroke="#8B949E" stroke-width="1.8" stroke-linecap="round"/>
+              </g>
+            </g>
+          </g>
         </g>
 
-        <!-- Right Arm (Walking Swing - Opposite) -->
-        <g transform="translate(0, 16)">
-          <animateTransform attributeName="transform" type="rotate" values="-25 0 0; 25 0 0; -25 0 0" dur="0.6s" repeatCount="indefinite" />
-          <line x1="0" y1="0" x2="-8" y2="20" stroke="#8B949E" stroke-width="2" stroke-linecap="round"/>
+        <!-- RIGHT ARM – pivot at (9, -46) -->
+        <g transform="translate(9,-46)">
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="24;-24;24" dur=".65s" repeatCount="indefinite"
+              calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+            <line x1="0" y1="0" x2="0" y2="17"
+              stroke="#E6EDF3" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="0" cy="17" r="1.8" fill="#161B22" stroke="#8B949E" stroke-width="1"/>
+            <g transform="translate(0,17)">
+              <g>
+                <animateTransform attributeName="transform" type="rotate"
+                  values="-5;9;-5" dur=".65s" repeatCount="indefinite"
+                  calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+                <line x1="0" y1="0" x2="0" y2="14"
+                  stroke="#8B949E" stroke-width="1.8" stroke-linecap="round"/>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <!-- LEFT LEG – pivot at (-5, -30) -->
+        <g transform="translate(-5,-30)">
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="-32;32;-32" dur=".65s" repeatCount="indefinite"
+              calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+            <line x1="0" y1="0" x2="0" y2="22"
+              stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="0" cy="22" r="2" fill="#161B22" stroke="#58A6FF" stroke-width="1"/>
+            <g transform="translate(0,22)">
+              <g>
+                <animateTransform attributeName="transform" type="rotate"
+                  values="24;3;24" dur=".65s" repeatCount="indefinite"
+                  calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+                <line x1="0" y1="0" x2="0" y2="21"
+                  stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+                <g transform="translate(0,21)">
+                  <circle cx="0" cy="0" r="1.5" fill="#161B22" stroke="#58A6FF" stroke-width=".8"/>
+                  <line x1="-2" y1="0" x2="9" y2="0"
+                    stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <!-- RIGHT LEG – pivot at (5, -30) -->
+        <g transform="translate(5,-30)">
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="32;-32;32" dur=".65s" repeatCount="indefinite"
+              calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+            <line x1="0" y1="0" x2="0" y2="22"
+              stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="0" cy="22" r="2" fill="#161B22" stroke="#58A6FF" stroke-width="1"/>
+            <g transform="translate(0,22)">
+              <g>
+                <animateTransform attributeName="transform" type="rotate"
+                  values="3;24;3" dur=".65s" repeatCount="indefinite"
+                  calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1"/>
+                <line x1="0" y1="0" x2="0" y2="21"
+                  stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+                <g transform="translate(0,21)">
+                  <circle cx="0" cy="0" r="1.5" fill="#161B22" stroke="#58A6FF" stroke-width=".8"/>
+                  <line x1="-2" y1="0" x2="9" y2="0"
+                    stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+
+      </g><!-- /y-bounce -->
+    </g><!-- /x-track -->
+  </g><!-- /walk scene -->
+
+  <!-- ===================================================
+       SPARKLE SNAP — at absolute (415, 63)
+       t=3.2s–4.0s → .246–.308
+  =================================================== -->
+  <g transform="translate(415,63)" opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;0;1;1;0;0"
+      keyTimes="0;.240;.246;.265;.285;.308;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.2 0 .8 1;0 0 1 1;.2 0 .8 1;0 0 1 1"/>
+    <!-- 8-point star -->
+    <path d="M0 -14 L2.5 -2.5 L14 0 L2.5 2.5 L0 14 L-2.5 2.5 L-14 0 L-2.5 -2.5Z"
+      fill="#58A6FF" filter="url(#g1)"/>
+    <circle r="4" fill="#FFFFFF"/>
+    <!-- Cardinal rays -->
+    <line x1="0" y1="-19" x2="0" y2="-23" stroke="#58A6FF" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <line x1="19" y1="0" x2="23" y2="0" stroke="#58A6FF" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <line x1="-19" y1="0" x2="-23" y2="0" stroke="#58A6FF" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <line x1="0" y1="19" x2="0" y2="23" stroke="#58A6FF" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <!-- Diagonal rays -->
+    <line x1="13" y1="-13" x2="16" y2="-16" stroke="#79C0FF" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+    <line x1="-13" y1="-13" x2="-16" y2="-16" stroke="#79C0FF" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+    <line x1="13" y1="13" x2="16" y2="16" stroke="#79C0FF" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+    <line x1="-13" y1="13" x2="-16" y2="16" stroke="#79C0FF" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+  </g>
+
+  <!-- ===================================================
+       GAMING CHAIR — centered at (415, 126)
+       Spawn: slides up 10px, t=3.4s–4.0s → .262–.308
+  =================================================== -->
+  <g transform="translate(415,126)">
+    <g opacity="0">
+      <animate attributeName="opacity"
+        values="0;0;0;1;1;0;0"
+        keyTimes="0;.246;.262;.292;.885;.923;1"
+        dur="13s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0 0 1 1;0 0 1 1;.4 0 .2 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+      <g>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 10;0 10;0 10;0 0;0 0;0 10;0 10"
+          keyTimes="0;.246;.262;.292;.885;.923;1"
+          dur="13s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0 0 1 1;0 0 1 1;.3 0 .1 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+
+        <!-- Chair body – local: feet=0 origin, chair centered -->
+        <!-- Tall gaming backrest on left side of seat -->
+        <path d="M-20 -2 L-20 -60 Q-20 -70 -13 -70 Q-6 -70 -6 -60 L-6 -2Z"
+          stroke="#1F6FEB" stroke-width="1.5" fill="#0E1319" stroke-linejoin="round"/>
+        <!-- Headrest wings -->
+        <path d="M-20 -56 Q-25 -65 -18 -70" stroke="#58A6FF" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M-6 -56 Q-1 -65 -8 -70"   stroke="#58A6FF" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Seat cushion -->
+        <rect x="-22" y="-8" width="48" height="12" rx="4"
+          fill="#0E1319" stroke="#1F6FEB" stroke-width="1.5"/>
+        <line x1="-18" y1="-4" x2="22" y2="-4" stroke="#1F6FEB" stroke-width=".5" stroke-opacity=".3"/>
+        <!-- Armrests -->
+        <line x1="-22" y1="-30" x2="-28" y2="-30" stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-28" y1="-30" x2="-28" y2="-20" stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+        <line x1="26" y1="-30" x2="32" y2="-30" stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+        <line x1="32" y1="-30" x2="32" y2="-20" stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+        <!-- Piston/gas lift -->
+        <line x1="10" y1="4" x2="10" y2="24" stroke="#484F58" stroke-width="4" stroke-linecap="round"/>
+        <!-- 5-star base -->
+        <line x1="10" y1="24" x2="-18" y2="30" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="24" x2="36" y2="30" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="24" x2="10" y2="33" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="24" x2="-12" y2="33" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="24" x2="30" y2="33" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+        <!-- Wheels -->
+        <circle cx="-18" cy="30" r="3" fill="#1F6FEB" fill-opacity=".5"/>
+        <circle cx="36"  cy="30" r="3" fill="#1F6FEB" fill-opacity=".5"/>
+        <circle cx="10"  cy="33" r="3" fill="#1F6FEB" fill-opacity=".5"/>
+        <circle cx="-12" cy="33" r="3" fill="#1F6FEB" fill-opacity=".5"/>
+        <circle cx="30"  cy="33" r="3" fill="#1F6FEB" fill-opacity=".5"/>
+        <!-- RGB glow strips -->
+        <line x1="-20" y1="-15" x2="-20" y2="-48" stroke="#1F6FEB"
+          stroke-width="1.5" stroke-opacity=".7" filter="url(#g3)">
+          <animate attributeName="stroke" values="#1F6FEB;#58A6FF;#7EE787;#1F6FEB" dur="3s" repeatCount="indefinite"/>
+        </line>
+        <line x1="-6" y1="-15" x2="-6" y2="-48" stroke="#7EE787"
+          stroke-width="1.5" stroke-opacity=".7" filter="url(#g3)">
+          <animate attributeName="stroke" values="#7EE787;#1F6FEB;#58A6FF;#7EE787" dur="3s" repeatCount="indefinite"/>
+        </line>
+      </g>
+    </g>
+  </g><!-- /chair -->
+
+  <!-- ===================================================
+       SITTING STICKMAN — origin (415, 126)
+       Visible: t=3.7s–12.0s → .285–.923
+  =================================================== -->
+  <g transform="translate(415,126)" opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.277;.308;.885;.923;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.4 0 .6 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+
+    <!-- Shadow -->
+    <ellipse cx="0" cy="2" rx="28" ry="3" fill="#1F6FEB" fill-opacity=".1"/>
+
+    <!-- SHINS (vertical, feet flat) -->
+    <line x1="-15" y1="-30" x2="-15" y2="0"
+      stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-15" cy="0" r="1.5" fill="#161B22" stroke="#58A6FF" stroke-width=".8"/>
+    <line x1="-21" y1="0" x2="-8" y2="0"
+      stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+
+    <line x1="19" y1="-30" x2="19" y2="0"
+      stroke="#1F6FEB" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="19" cy="0" r="1.5" fill="#161B22" stroke="#58A6FF" stroke-width=".8"/>
+    <line x1="13" y1="0" x2="26" y2="0"
+      stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- THIGHS (knees at ±15, -30; hips at 0,-35) -->
+    <circle cx="-15" cy="-30" r="2" fill="#161B22" stroke="#58A6FF" stroke-width="1"/>
+    <line x1="0" y1="-35" x2="-15" y2="-30"
+      stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="19" cy="-30" r="2" fill="#161B22" stroke="#58A6FF" stroke-width="1"/>
+    <line x1="0" y1="-35" x2="19" y2="-30"
+      stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- HIP -->
+    <circle cx="0" cy="-35" r="2.5" fill="#1F6FEB" fill-opacity=".5"/>
+
+    <!-- TORSO (slightly reclined) -->
+    <line x1="0" y1="-35" x2="-3" y2="-59"
+      stroke="#E6EDF3" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- NECK -->
+    <line x1="-3" y1="-59" x2="-4" y2="-64"
+      stroke="#E6EDF3" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- HEAD (gentle tilt towards screen while typing) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="6;4;6;4;6" dur="3s" repeatCount="indefinite"
+        calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1"/>
+      <circle cx="-4" cy="-74" r="10"
+        stroke="#58A6FF" stroke-width="2.2" fill="#0D1117" filter="url(#g3)"/>
+      <!-- Eye looking at screen (right) -->
+      <circle cx="0" cy="-74.5" r="1.6" fill="#58A6FF"/>
+      <!-- Screen reflection highlight -->
+      <circle cx="1.5" cy="-76" r=".7" fill="#FFFFFF" fill-opacity=".9"/>
+    </g>
+
+    <!-- LEFT TYPING ARM — pivot (-12, -56) -->
+    <g transform="translate(-12,-56)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="60;72;58;75;60;68;60" dur=".2s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1"/>
+        <line x1="0" y1="0" x2="0" y2="16"
+          stroke="#E6EDF3" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="16" r="1.8" fill="#161B22" stroke="#8B949E" stroke-width="1"/>
+        <g transform="translate(0,16)">
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="22;34;18;36;22;30;22" dur=".2s" repeatCount="indefinite"
+              calcMode="spline"
+              keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1"/>
+            <line x1="0" y1="0" x2="0" y2="14"
+              stroke="#8B949E" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Fingertip glow -->
+            <circle cx="0" cy="14" r="2.2" fill="#58A6FF" fill-opacity=".7" filter="url(#g3)"/>
+          </g>
         </g>
       </g>
+    </g>
 
-      <!-- Left Leg (Walk Swing) -->
-      <g transform="translate(0, 40)">
-        <animateTransform attributeName="transform" type="rotate" values="-28 0 0; 28 0 0; -28 0 0" dur="0.6s" repeatCount="indefinite" />
-        <line x1="0" y1="0" x2="4" y2="16" stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
-        <line x1="4" y1="16" x2="10" y2="30" stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- RIGHT TYPING ARM — pivot (5, -56) -->
+    <g transform="translate(5,-56)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          values="72;60;75;58;72;65;72" dur=".2s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1"/>
+        <line x1="0" y1="0" x2="0" y2="16"
+          stroke="#E6EDF3" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="16" r="1.8" fill="#161B22" stroke="#8B949E" stroke-width="1"/>
+        <g transform="translate(0,16)">
+          <g>
+            <animateTransform attributeName="transform" type="rotate"
+              values="30;20;34;16;30;24;30" dur=".2s" repeatCount="indefinite"
+              calcMode="spline"
+              keySplines=".4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1;.4 0 .6 1"/>
+            <line x1="0" y1="0" x2="0" y2="14"
+              stroke="#8B949E" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="0" cy="14" r="2.2" fill="#58A6FF" fill-opacity=".7" filter="url(#g3)"/>
+          </g>
+        </g>
       </g>
-
-      <!-- Right Leg (Walk Swing - Opposite) -->
-      <g transform="translate(0, 40)">
-        <animateTransform attributeName="transform" type="rotate" values="28 0 0; -28 0 0; 28 0 0" dur="0.6s" repeatCount="indefinite" />
-        <line x1="0" y1="0" x2="-4" y2="16" stroke="#1F6FEB" stroke-width="2.2" stroke-linecap="round"/>
-        <line x1="-4" y1="16" x2="-10" y2="30" stroke="#1F6FEB" stroke-width="2.2" stroke-linecap="round"/>
-      </g>
-    </g>
-  </g>
-
-  <!-- ================= 2. MAGIC SPARKLE POP (At 2.6s - 3.4s) ================= -->
-  <g transform="translate(425, 65)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.22; 0.24; 0.28; 0.30; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="scale" values="0.2; 0.2; 1.4; 1; 0.2; 0.2" keyTimes="0; 0.22; 0.24; 0.28; 0.30; 1" dur="12s" repeatCount="indefinite" />
-    <!-- 4-Point Star Sparkle -->
-    <path d="M 0 -12 Q 0 0 12 0 Q 0 0 0 12 Q 0 0 -12 0 Q 0 0 0 -12 Z" fill="#58A6FF" filter="url(#stickGlow)"/>
-    <circle r="3" fill="#FFFFFF"/>
-  </g>
-
-  <!-- ================= 3. GAMING CHAIR MATERIALIZATION (Visible 2.8s - 11.2s) ================= -->
-  <g transform="translate(378, 55)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.23; 0.26; 0.94; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="378 75; 378 75; 378 55; 378 55; 378 55" keyTimes="0; 0.23; 0.26; 0.94; 1" dur="12s" repeatCount="indefinite" />
-
-    <!-- Chair Backrest & Head Pillow -->
-    <path d="M -16 6 Q -18 20 -12 45" stroke="#1F6FEB" stroke-width="3.5" stroke-linecap="round"/>
-    <rect x="-20" y="2" width="10" height="6" rx="3" fill="#58A6FF"/>
-    
-    <!-- Seat Cushion -->
-    <line x1="-14" y1="46" x2="16" y2="46" stroke="#58A6FF" stroke-width="4" stroke-linecap="round"/>
-    
-    <!-- Armrest -->
-    <path d="M -8 32 H 8 V 44" stroke="#79C0FF" stroke-width="2" stroke-linecap="round" fill="none"/>
-
-    <!-- Central Stand Pole & Base -->
-    <line x1="0" y1="48" x2="0" y2="65" stroke="#30363D" stroke-width="3"/>
-    <line x1="-16" y1="68" x2="16" y2="68" stroke="#30363D" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Wheels -->
-    <circle cx="-14" cy="69" r="1.8" fill="#58A6FF"/>
-    <circle cx="14" cy="69" r="1.8" fill="#58A6FF"/>
-  </g>
-
-  <!-- ================= 4. SITTING STICKMAN (Visible 2.6s - 11.2s) ================= -->
-  <g id="sittingStickman" transform="translate(382, 55)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.23; 0.25; 0.94; 1" dur="12s" repeatCount="indefinite" />
-    
-    <!-- Head (Leaning into screen with slight bobbing during typing) -->
-    <g transform="translate(0, 0)">
-      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1; 0 0; 0 -1; 0 0" dur="0.4s" repeatCount="indefinite" />
-      <circle cx="-2" cy="0" r="9" stroke="#58A6FF" stroke-width="2.2" fill="#0D1117" filter="url(#stickGlow)"/>
-      <!-- Eye looking intently at laptop -->
-      <circle cx="2" cy="1" r="1.5" fill="#58A6FF"/>
     </g>
 
-    <!-- Torso (Seated posture) -->
-    <line x1="-2" y1="9" x2="-4" y2="42" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+  </g><!-- /sitting stickman -->
 
-    <!-- Bent Seated Legs -->
-    <!-- Thigh (Hip to Knee) -->
-    <line x1="-4" y1="42" x2="18" y2="44" stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
-    <!-- Calf (Knee to Ground) -->
-    <line x1="18" y1="44" x2="18" y2="70" stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
-    <!-- Foot -->
-    <line x1="18" y1="70" x2="25" y2="70" stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+  <!-- ===================================================
+       LAPTOP — absolute coords x=430–485, y=88–105
+       Visible: t=4.0s–12.0s → .308–.923
+  =================================================== -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.300;.323;.885;.923;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.4 0 .6 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 8;0 8;0 0;0 0;0 8;0 8"
+      keyTimes="0;.300;.323;.885;.923;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.3 0 .1 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
 
-    <!-- Left Furiously Typing Arm (Rapid Jitter Animation!) -->
-    <g transform="translate(-2, 18)">
-      <animateTransform attributeName="transform" type="rotate" values="18 0 0; 28 0 0; 16 0 0; 30 0 0; 18 0 0" dur="0.25s" repeatCount="indefinite" />
-      <line x1="0" y1="0" x2="15" y2="12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-      <line x1="15" y1="12" x2="26" y2="18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-    </g>
+    <!-- Keyboard base -->
+    <rect x="430" y="97" width="56" height="8" rx="2"
+      fill="#161B22" stroke="#E6EDF3" stroke-width="1.3"/>
+    <!-- Key column lines -->
+    <line x1="437" y1="97" x2="437" y2="105" stroke="#30363D" stroke-width=".5"/>
+    <line x1="445" y1="97" x2="445" y2="105" stroke="#30363D" stroke-width=".5"/>
+    <line x1="453" y1="97" x2="453" y2="105" stroke="#30363D" stroke-width=".5"/>
+    <line x1="461" y1="97" x2="461" y2="105" stroke="#30363D" stroke-width=".5"/>
+    <line x1="469" y1="97" x2="469" y2="105" stroke="#30363D" stroke-width=".5"/>
+    <line x1="430" y1="101" x2="486" y2="101" stroke="#30363D" stroke-width=".5"/>
+    <!-- Touchpad -->
+    <rect x="448" y="102" width="18" height="4" rx="1"
+      fill="#0D1117" stroke="#30363D" stroke-width=".7"/>
 
-    <!-- Right Furiously Typing Arm (Rapid Jitter - Offset) -->
-    <g transform="translate(-2, 18)">
-      <animateTransform attributeName="transform" type="rotate" values="28 0 0; 15 0 0; 30 0 0; 18 0 0; 28 0 0" dur="0.25s" repeatCount="indefinite" />
-      <line x1="0" y1="0" x2="14" y2="14" stroke="#8B949E" stroke-width="2" stroke-linecap="round"/>
-      <line x1="14" y1="14" x2="28" y2="19" stroke="#8B949E" stroke-width="2" stroke-linecap="round"/>
-    </g>
-  </g>
+    <!-- Hinge -->
+    <line x1="430" y1="97" x2="486" y2="97" stroke="#484F58" stroke-width="1.5"/>
 
-  <!-- ================= 5. LAPTOP & GLOW CONE (Visible 3.4s - 11.2s) ================= -->
-  <g transform="translate(402, 92)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.28; 0.30; 0.94; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="scale" values="0.2; 0.2; 1; 1; 0.2" keyTimes="0; 0.28; 0.30; 0.94; 1" dur="12s" repeatCount="indefinite" />
+    <!-- Screen lid (opened ~120°) -->
+    <path d="M430 97 L415 62 L471 62 L486 97Z"
+      fill="#161B22" stroke="#E6EDF3" stroke-width="1.3" stroke-linejoin="round"/>
 
-    <!-- Laptop Base -->
-    <line x1="0" y1="6" x2="20" y2="6" stroke="#E6EDF3" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Laptop Open Screen Lid -->
-    <line x1="18" y1="6" x2="24" y2="-12" stroke="#58A6FF" stroke-width="2.2" stroke-linecap="round"/>
-    
-    <!-- Screen Blue Light Cone Illuminating Stickman Face -->
-    <polygon points="18,6 24,-12 4,-12" fill="url(#laptopCone)" filter="url(#screenGlowFilter)"/>
-    
-    <!-- Glowing Apple/Matrix Logo on back of lid -->
-    <circle cx="21" cy="-3" r="1.5" fill="#58A6FF" filter="url(#stickGlow)"/>
-  </g>
+    <!-- Screen viewport -->
+    <rect x="418" y="65" width="64" height="29" rx="1" fill="#060A10"/>
+    <!-- Terminal line: green prompt -->
+    <text x="422" y="73" fill="#2EA043" font-family="'Fira Code',monospace"
+      font-size="5" font-weight="700">$ run --god-mode</text>
+    <!-- Code bars -->
+    <rect x="422" y="76" width="42" height="3" rx="1" fill="#58A6FF" fill-opacity=".5"/>
+    <rect x="422" y="81" width="34" height="3" rx="1" fill="#79C0FF" fill-opacity=".4"/>
+    <rect x="422" y="86" width="38" height="3" rx="1" fill="#7EE787" fill-opacity=".4"/>
+    <!-- Cursor blink -->
+    <rect x="460" y="86" width="4" height="5" rx=".5" fill="#58A6FF">
+      <animate attributeName="opacity" values="1;0;1" dur=".75s" repeatCount="indefinite"/>
+    </rect>
 
-  <!-- ================= 6. FLOATING NEON CODE PARTICLES & COFFEE STEAM (Visible 4.0s - 10.8s) ================= -->
-  <!-- Code Particle 1: < /> -->
-  <g transform="translate(422, 70)">
-    <animate attributeName="opacity" values="0; 0; 1; 0.8; 0; 0" keyTimes="0; 0.33; 0.40; 0.60; 0.70; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="422 80; 422 80; 430 50; 434 25; 438 10; 438 10" keyTimes="0; 0.33; 0.45; 0.65; 0.80; 1" dur="12s" repeatCount="indefinite" />
-    <text fill="#58A6FF" font-family="'Fira Code', Consolas, monospace" font-size="11" font-weight="900" filter="url(#stickGlow)">&lt; / &gt;</text>
-  </g>
+    <!-- Screen edge glow -->
+    <rect x="418" y="65" width="64" height="29" rx="1" fill="none"
+      stroke="#58A6FF" stroke-width=".8" stroke-opacity=".3" filter="url(#g1)"/>
+    <!-- Ambient light cone from screen onto face -->
+    <ellipse cx="443" cy="78" rx="42" ry="22" fill="#58A6FF" fill-opacity=".04" filter="url(#g2)"/>
 
-  <!-- Code Particle 2: { ; } -->
-  <g transform="translate(416, 65)">
-    <animate attributeName="opacity" values="0; 0; 1; 0.8; 0; 0" keyTimes="0; 0.45; 0.52; 0.70; 0.82; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="416 80; 416 80; 410 52; 405 30; 400 12; 400 12" keyTimes="0; 0.45; 0.55; 0.72; 0.88; 1" dur="12s" repeatCount="indefinite" />
-    <text fill="#2EA043" font-family="'Fira Code', Consolas, monospace" font-size="12" font-weight="900" filter="url(#stickGlow)">{ ; }</text>
-  </g>
+    <!-- Brand dot (lid back) -->
+    <circle cx="456" cy="80" r="3.5" fill="none" stroke="#58A6FF" stroke-width=".8" stroke-opacity=".4"/>
+    <circle cx="456" cy="80" r="1.5" fill="#1F6FEB" fill-opacity=".4">
+      <animate attributeName="fill-opacity" values=".3;.7;.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g><!-- /laptop -->
 
-  <!-- Code Particle 3: 0101 -->
-  <g transform="translate(430, 60)">
-    <animate attributeName="opacity" values="0; 0; 1; 0.8; 0; 0" keyTimes="0; 0.55; 0.62; 0.80; 0.90; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="430 80; 430 80; 438 55; 444 32; 448 15; 448 15" keyTimes="0; 0.55; 0.65; 0.80; 0.92; 1" dur="12s" repeatCount="indefinite" />
-    <text fill="#FFD600" font-family="'Fira Code', Consolas, monospace" font-size="10" font-weight="800">0101</text>
-  </g>
-
-  <!-- Mini Coffee Mug on floor -->
-  <g transform="translate(442, 116)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.28; 0.30; 0.94; 1" dur="12s" repeatCount="indefinite" />
-    <rect width="9" height="9" rx="1.5" fill="#161B22" stroke="#D18859" stroke-width="1.2"/>
-    <path d="M 9 2 C 12 2 12 7 9 7" stroke="#D18859" stroke-width="1" fill="none"/>
-    <!-- Coffee Steam Curve -->
-    <path d="M 4 0 Q 2 -4 5 -7 Q 8 -10 4 -13" stroke="#D18859" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.6">
-      <animate attributeName="stroke-dashoffset" values="0; 20; 0" dur="2s" repeatCount="indefinite"/>
+  <!-- ===================================================
+       COFFEE MUG — absolute x=492–510, y=113–126
+  =================================================== -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.300;.323;.885;.923;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.4 0 .6 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+    <!-- Mug body -->
+    <rect x="493" y="113" width="14" height="13" rx="2"
+      fill="#161B22" stroke="#D18859" stroke-width="1.2"/>
+    <!-- Handle -->
+    <path d="M507 115 C513 115 513 124 507 124"
+      stroke="#D18859" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <!-- Coffee surface -->
+    <rect x="495" y="114.5" width="10" height="2.5" rx="1"
+      fill="#D18859" fill-opacity=".35"/>
+    <!-- Steam (3 wisps, staggered) -->
+    <path d="M497 113 Q495 107 498 101"
+      stroke="#D18859" stroke-width="1" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-opacity" values=".5;0;.5" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M500 113 Q502 107 499 101"
+      stroke="#D18859" stroke-width="1" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-opacity" values="0;.35;0" dur="2.2s" begin=".8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M503 113 Q501 108 504 101"
+      stroke="#D18859" stroke-width="1" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-opacity" values=".25;0;.25" dur="2.2s" begin="1.6s" repeatCount="indefinite"/>
     </path>
   </g>
 
-  <!-- ================= 7. HILARIOUS DEVELOPER THOUGHT / SPEECH BUBBLE ================= -->
-  <!-- Bubble Phase 1: "It worked on my machine! 🚀" (5.2s - 8.2s) -->
-  <g transform="translate(435, 18)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.42; 0.44; 0.68; 0.70; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="435 25; 435 25; 435 18; 435 18; 435 25; 435 25" keyTimes="0; 0.42; 0.44; 0.68; 0.70; 1" dur="12s" repeatCount="indefinite" />
-    
-    <!-- Bubble Container -->
-    <rect width="210" height="28" rx="8" fill="#161B22" stroke="#58A6FF" stroke-width="1.2" filter="url(#stickGlow)"/>
-    <!-- Speech Tail Pointing to Head -->
-    <path d="M 12 28 L 6 36 L 22 28 Z" fill="#161B22" stroke="#58A6FF" stroke-width="1.2"/>
-    <rect x="10" y="27" width="14" height="2" fill="#161B22"/>
-    
-    <text x="105" y="18" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
-      "It worked on my machine! 🚀"
+  <!-- ===================================================
+       FLOATING CODE PARTICLES (staggered, rise & fade)
+  =================================================== -->
+
+  <!-- Particle 1: </> — t=4.4s–5.8s -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;0;1;.7;0;0"
+      keyTimes="0;.330;.338;.377;.446;.485;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="448 95;448 95;448 95;448 82;448 52;448 35;448 35"
+      keyTimes="0;.330;.338;.377;.446;.485;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <text fill="#58A6FF" font-family="'Fira Code',monospace"
+      font-size="10" font-weight="900" filter="url(#g3)">&lt;/&gt;</text>
+  </g>
+
+  <!-- Particle 2: { } — t=5.8s–7.2s -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;0;1;.7;0;0"
+      keyTimes="0;.438;.446;.485;.554;.592;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="436 92;436 92;436 92;436 80;436 50;436 33;436 33"
+      keyTimes="0;.438;.446;.485;.554;.592;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <text fill="#2EA043" font-family="'Fira Code',monospace"
+      font-size="11" font-weight="900" filter="url(#g3)">{ }</text>
+  </g>
+
+  <!-- Particle 3: 0101 — t=7.2s–8.6s -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;0;1;.7;0;0"
+      keyTimes="0;.546;.554;.592;.662;.700;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="456 90;456 90;456 90;456 77;456 48;456 30;456 30"
+      keyTimes="0;.546;.554;.592;.662;.700;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <text fill="#FFD600" font-family="'Fira Code',monospace" font-size="9" font-weight="900">0101</text>
+  </g>
+
+  <!-- Particle 4: => — t=8.6s–10.0s -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;0;1;.7;0;0"
+      keyTimes="0;.654;.662;.700;.769;.808;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="443 88;443 88;443 88;443 75;443 45;443 27;443 27"
+      keyTimes="0;.654;.662;.700;.769;.808;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;0 0 1 1;.4 0 .6 1;.2 0 .8 1;.4 0 .6 1;0 0 1 1"/>
+    <text fill="#A371F7" font-family="'Fira Code',monospace"
+      font-size="9" font-weight="900" filter="url(#g3)">=&gt;</text>
+  </g>
+
+  <!-- ===================================================
+       THOUGHT BUBBLE 1 — "It worked locally... 🚀"
+       t=5.2s–8.4s → .400–.646
+       Cloud at x=220–395, y=12–40
+       Tail tip points to head at ~(411, 53)
+  =================================================== -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.392;.415;.623;.646;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.35 0 .15 1;0 0 1 1;.35 0 .65 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 7;0 7;0 0;0 0;0 7;0 7"
+      keyTimes="0;.392;.415;.623;.646;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.35 0 .15 1;0 0 1 1;.35 0 .65 1;0 0 1 1"/>
+    <!-- Thought bubble tail (dot chain) -->
+    <circle cx="405" cy="50" r="2.5" fill="#161B22" stroke="#58A6FF" stroke-width="1.2"/>
+    <circle cx="398" cy="43" r="3.5" fill="#161B22" stroke="#58A6FF" stroke-width="1.2"/>
+    <circle cx="389" cy="35" r="4.5" fill="#161B22" stroke="#58A6FF" stroke-width="1.2"/>
+    <!-- Cloud bumps (top) -->
+    <circle cx="267" cy="12" r="8"  fill="#161B22" stroke="#58A6FF" stroke-width="1.3"/>
+    <circle cx="305" cy="11" r="10" fill="#161B22" stroke="#58A6FF" stroke-width="1.3"/>
+    <circle cx="344" cy="12" r="8"  fill="#161B22" stroke="#58A6FF" stroke-width="1.3"/>
+    <!-- Main bubble rect (covers bottom of circles) -->
+    <rect x="220" y="14" width="172" height="26" rx="10"
+      fill="#161B22" stroke="#58A6FF" stroke-width="1.3" filter="url(#g1)"/>
+    <!-- Text -->
+    <text x="306" y="31" fill="#FFFFFF" font-family="Inter,system-ui,sans-serif"
+      font-size="11" font-weight="700" text-anchor="middle">
+      "It worked locally... 🚀"
     </text>
   </g>
 
-  <!-- Bubble Phase 2: "Compiling Life... ☕" (8.2s - 10.8s) -->
-  <g transform="translate(435, 18)">
-    <animate attributeName="opacity" values="0; 0; 1; 1; 0; 0" keyTimes="0; 0.70; 0.72; 0.90; 0.92; 1" dur="12s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="435 25; 435 25; 435 18; 435 18; 435 25; 435 25" keyTimes="0; 0.70; 0.72; 0.90; 0.92; 1" dur="12s" repeatCount="indefinite" />
-    
-    <rect width="210" height="28" rx="8" fill="#161B22" stroke="#7EE787" stroke-width="1.2" filter="url(#stickGlow)"/>
-    <path d="M 12 28 L 6 36 L 22 28 Z" fill="#161B22" stroke="#7EE787" stroke-width="1.2"/>
-    <rect x="10" y="27" width="14" height="2" fill="#161B22"/>
-    
-    <text x="105" y="18" fill="#7EE787" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">
+  <!-- ===================================================
+       THOUGHT BUBBLE 2 — "Bug Fixed! Deploying... 🕶️"
+       t=8.4s–11.5s → .646–.885
+  =================================================== -->
+  <g opacity="0">
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.638;.661;.862;.885;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.35 0 .15 1;0 0 1 1;.35 0 .65 1;0 0 1 1"/>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 7;0 7;0 0;0 0;0 7;0 7"
+      keyTimes="0;.638;.661;.862;.885;1"
+      dur="13s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1;.35 0 .15 1;0 0 1 1;.35 0 .65 1;0 0 1 1"/>
+    <!-- Tail -->
+    <circle cx="405" cy="50" r="2.5" fill="#161B22" stroke="#7EE787" stroke-width="1.2"/>
+    <circle cx="398" cy="43" r="3.5" fill="#161B22" stroke="#7EE787" stroke-width="1.2"/>
+    <circle cx="389" cy="35" r="4.5" fill="#161B22" stroke="#7EE787" stroke-width="1.2"/>
+    <!-- Cloud bumps -->
+    <circle cx="269" cy="12" r="8"  fill="#161B22" stroke="#7EE787" stroke-width="1.3"/>
+    <circle cx="310" cy="11" r="10" fill="#161B22" stroke="#7EE787" stroke-width="1.3"/>
+    <circle cx="350" cy="12" r="8"  fill="#161B22" stroke="#7EE787" stroke-width="1.3"/>
+    <!-- Main bubble -->
+    <rect x="222" y="14" width="178" height="26" rx="10"
+      fill="#161B22" stroke="#7EE787" stroke-width="1.3" filter="url(#g1)"/>
+    <!-- Text -->
+    <text x="311" y="31" fill="#7EE787" font-family="Inter,system-ui,sans-serif"
+      font-size="11" font-weight="800" text-anchor="middle">
       "Bug Fixed! Deploying... 🕶️"
     </text>
   </g>
+
 </svg>
