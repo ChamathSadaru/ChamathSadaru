@@ -6,7 +6,10 @@
 
 ---
 
-### 💫 About Me
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="💫" width="38" height="38" />
+  <h3>About Me</h3>
+</div>
 
 <div align="center">
   <p align="center">
@@ -38,7 +41,10 @@
 
 ---
 
-### 🛠️ Active Tech Arsenal & Architecture
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="⚙️" width="38" height="38" />
+  <h3>Active Tech Arsenal &amp; Architecture</h3>
+</div>
 
 <div align="center">
   <picture>
@@ -50,7 +56,7 @@
 <br>
 
 <details>
-<summary align="center"><b>🔍 View Quick Icons & Badges</b></summary>
+<summary align="center"><b>🔍 View Quick Icons &amp; Badges</b></summary>
 <br>
 
 <div align="center">
@@ -82,7 +88,10 @@
 
 ---
 
-### 🚀 Highlighted Engineering Projects
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="🚀" width="38" height="38" />
+  <h3>Highlighted Engineering Projects</h3>
+</div>
 
 <div align="center">
   <picture>
@@ -93,7 +102,12 @@
 
 <br>
 
-### 📊 Performance Metrics & Activity
+---
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="📊" width="38" height="38" />
+  <h3>Performance Metrics &amp; Activity</h3>
+</div>
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=ChamathSadaru&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="165" alt="streak graph" />
@@ -109,7 +123,10 @@
 
 ---
 
-### 🐍 Contribution Activity
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Snake.png" alt="🐍" width="38" height="38" />
+  <h3>Contribution Activity</h3>
+</div>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="850" />
