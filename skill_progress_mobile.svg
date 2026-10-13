@@ -13,16 +13,16 @@
     
     <!-- Linear Gradient for Tags -->
     <linearGradient id="tagGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0.02" />
+      <stop offset="0%" stop-color="#3DDC84" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#3DDC84" stop-opacity="0.02" />
     </linearGradient>
 
-    <!-- Animated Pulse Gradient for Jakarta EE Architecture -->
+    <!-- Animated Pulse Gradient for Android Development -->
     <radialGradient id="pulseGradientMobile" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-      <stop offset="0%" stop-color="#58A6FF">
-        <animate attributeName="stop-color" values="#58A6FF; #FFFFFF; #58A6FF" dur="2s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#3DDC84">
+        <animate attributeName="stop-color" values="#3DDC84; #FFFFFF; #3DDC84" dur="2s" repeatCount="indefinite" />
       </stop>
-      <stop offset="100%" stop-color="#1F6FEB" />
+      <stop offset="100%" stop-color="#2EA043" />
     </radialGradient>
 
     <filter id="textPulseMobile" x="-50%" y="-50%" width="200%" height="200%">
@@ -42,7 +42,7 @@
   <!-- Icon Container (Centered Top) -->
   <g transform="translate(225, 110)">
     <!-- Animated Outer Ring -->
-    <circle r="50" fill="#161B22" stroke="#1F6FEB" stroke-width="2.5" stroke-dasharray="200 120" stroke-linecap="round">
+    <circle r="50" fill="#161B22" stroke="#3DDC84" stroke-width="2.5" stroke-dasharray="200 120" stroke-linecap="round">
       <animateTransform 
         attributeName="transform" 
         type="rotate" 
@@ -52,62 +52,74 @@
         repeatCount="indefinite" />
     </circle>
     
-    <!-- Animated Enterprise Server Stack Icon (Floating Effect) -->
-    <g>
+    <!-- Animated Android Bugdroid Icon (Floating Effect) -->
+    <g transform="translate(0, -3)">
       <animateTransform 
         attributeName="transform" 
         type="translate" 
-        values="0 0; 0 -3; 0 0" 
+        values="0 -3; 0 -7; 0 -3" 
         dur="3s" 
         repeatCount="indefinite" 
         calcMode="spline" 
         keySplines="0.4, 0, 0.2, 1; 0.4, 0, 0.2, 1" />
-      <!-- Rack 1 -->
-      <rect x="-14" y="-16" width="28" height="9" rx="2" stroke="#58A6FF" stroke-width="2" fill="none"/>
-      <circle cx="8" cy="-11.5" r="1.5" fill="#2EA043"/>
-      <!-- Rack 2 -->
-      <rect x="-14" y="-4.5" width="28" height="9" rx="2" stroke="#58A6FF" stroke-width="2" fill="none"/>
-      <circle cx="8" cy="0" r="1.5" fill="#58A6FF"/>
-      <!-- Rack 3 -->
-      <rect x="-14" y="7" width="28" height="9" rx="2" stroke="#58A6FF" stroke-width="2" fill="none"/>
-      <circle cx="8" cy="11.5" r="1.5" fill="#2EA043"/>
+      
+      <!-- Antennae -->
+      <line x1="-9" y1="-14" x2="-15" y2="-22" stroke="#3DDC84" stroke-width="2.8" stroke-linecap="round"/>
+      <line x1="9" y1="-14" x2="15" y2="-22" stroke="#3DDC84" stroke-width="2.8" stroke-linecap="round"/>
+
+      <!-- Head -->
+      <path d="M -17,-3.5 A 17,17 0 0,1 17,-3.5 Z" fill="#3DDC84"/>
+      <!-- Eyes -->
+      <circle cx="-6.2" cy="-10.5" r="1.8" fill="#161B22"/>
+      <circle cx="6.2" cy="-10.5" r="1.8" fill="#161B22"/>
+
+      <!-- Body -->
+      <path d="M -17,1 L 17,1 L 17,17 A 4.5,4.5 0 0,1 12.5,21.5 L -12.5,21.5 A 4.5,4.5 0 0,1 -17,17 Z" fill="#3DDC84"/>
+
+      <!-- Arms -->
+      <rect x="-22.5" y="1" width="3.6" height="15" rx="1.8" fill="#3DDC84"/>
+      <rect x="18.9" y="1" width="3.6" height="15" rx="1.8" fill="#3DDC84"/>
+
+      <!-- Legs -->
+      <rect x="-10" y="21.5" width="3.8" height="8" rx="1.9" fill="#3DDC84"/>
+      <rect x="6.2" y="21.5" width="3.8" height="8" rx="1.9" fill="#3DDC84"/>
     </g>
   </g>
   
   <!-- Title Section (Centered) -->
   <g transform="translate(225, 215)">
-    <text y="0" fill="#58A6FF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="900" text-anchor="middle" letter-spacing="0.15em">NOW I AM DEEP DIVING</text>
-    <text y="45" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="900" text-anchor="middle">Jakarta <tspan fill="url(#pulseGradientMobile)" filter="url(#textPulseMobile)">EE</tspan></text>
-    <text y="72" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Enterprise Java Ecosystem</text>
+    <text y="0" fill="#3DDC84" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="900" text-anchor="middle" letter-spacing="0.15em">NOW I AM DEEP DIVING</text>
+    <text y="45" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="900" text-anchor="middle">Android <tspan fill="url(#pulseGradientMobile)" filter="url(#textPulseMobile)">Development</tspan></text>
+    <text y="72" fill="#8B949E" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Native Mobile Ecosystem</text>
   </g>
 
-  <!-- Smart Tech Stack Highlights (Jakarta EE Pillars) -->
+  <!-- Smart Tech Stack Highlights (Android Pillars) -->
   <g transform="translate(225, 340)">
-    <!-- Point 1: Enterprise Beans (EJB) -->
+    <!-- Point 1: Kotlin & Jetpack -->
     <g transform="translate(-115, 0)">
-      <rect width="230" height="34" rx="17" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+      <rect width="230" height="34" rx="17" fill="url(#tagGradient)" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
         <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" repeatCount="indefinite" />
       </rect>
-      <path d="M18 17h6m-3-3v6" stroke="#58A6FF" stroke-width="1.8" stroke-linecap="round"/>
-      <text x="34" y="21" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800">Enterprise Beans (EJB)</text>
+      <path d="M18 17h6m-3-3v6" stroke="#3DDC84" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="34" y="21" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800">Kotlin &amp; Jetpack</text>
     </g>
     
-    <!-- Point 2: JPA & Hibernate -->
+    <!-- Point 2: MVVM & Coroutines -->
     <g transform="translate(-115, 48)">
-      <rect width="230" height="34" rx="17" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+      <rect width="230" height="34" rx="17" fill="url(#tagGradient)" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
         <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" begin="1s" repeatCount="indefinite" />
       </rect>
-      <circle cx="21" cy="17" r="3" fill="#58A6FF" fill-opacity="0.8"/>
-      <text x="34" y="21" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800">JPA &amp; Hibernate</text>
+      <circle cx="21" cy="17" r="3" fill="#3DDC84" fill-opacity="0.8"/>
+      <text x="34" y="21" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800">MVVM &amp; Coroutines</text>
     </g>
     
-    <!-- Point 3: JAX-RS & Servlets -->
+    <!-- Point 3: Room DB & Retrofit -->
     <g transform="translate(-115, 96)">
-      <rect width="230" height="34" rx="17" fill="url(#tagGradient)" stroke="#1F6FEB" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
+      <rect width="230" height="34" rx="17" fill="url(#tagGradient)" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.4" filter="url(#glow)">
         <animate attributeName="stroke-opacity" values="0.4; 0.8; 0.4" dur="3s" begin="2s" repeatCount="indefinite" />
       </rect>
-      <path d="M16 17l4 4 6-6" stroke="#58A6FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="34" y="21" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800">JAX-RS &amp; Servlets</text>
+      <path d="M16 17l4 4 6-6" stroke="#3DDC84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="34" y="21" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="800">Room DB &amp; Retrofit</text>
     </g>
   </g>
 
