@@ -111,7 +111,7 @@
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=ChamathSadaru&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="165" alt="streak graph" />
-  <img src="https://github-profile-trophy.vercel.app?username=ChamathSadaru&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8" height="165" alt="trophy graph" />
+  <img src="https://github-trophies.devomb.com?username=ChamathSadaru&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8" height="165" alt="trophy graph" />
 </div>
 
 <div align="center">
