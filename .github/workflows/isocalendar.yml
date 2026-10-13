@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 0 * * *"}] # දිනපතා අප්ඩේට් වේ
+  schedule: [{cron: "0 0 * * *"}]
   workflow_dispatch:
   push: {branches: ["master", "main"]}
 jobs:
@@ -18,5 +18,5 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
           output_action: commit
-          committer_branch: output # මෙතැන 'output' ලෙස දීමෙන් ඔයාගේ ලින්ක් එක වැඩ කරනු ඇත
+          committer_branch: output 
           filename: isocalendar.svg

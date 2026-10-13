@@ -135,6 +135,12 @@
 <br>
 
 <div align="center">
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D Profile Contribution Graph" width="850" />
+</div>
+
+<br>
+
+<div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/isocalendar.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChamathSadaru/ChamathSadaru/output/isocalendar.svg">

@@ -1,7 +1,7 @@
 name: GitHub-Profile-3D-Contrib
 
 on:
-  schedule: # සෑම පැය 24කට වරක්ම auto run වේ
+  schedule: 
     - cron: "0 18 * * *"
   workflow_dispatch:
 
